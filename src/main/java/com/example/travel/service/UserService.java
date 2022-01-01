@@ -14,7 +14,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserService {
 
-    @Autowired
     private final UserRepository repo;
 
     // api 구현

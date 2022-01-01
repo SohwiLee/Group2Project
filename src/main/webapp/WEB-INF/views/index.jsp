@@ -30,14 +30,14 @@
                 <div class="title"><h2>테마여행</h2> <p><a href="/search">더 자세히 검색하기</a></p></div>
                 <div class="lists">
                     <ul>
-                        <li><a href="">#겨울여행</a></li>
+                        <li><a href="">#가족여행</a></li>
                         <li><a href="">#당일치기</a></li>
                         <li><a href="">#축제</a></li>
                         <li><a href="">#역사여행</a></li>
                         <li><a href="">#로맨틱_야경</a></li>
                         <li><a href="">#데이트_코스</a></li>
-                        <li><a href="">#액티비티</a></li>
-                        <li><a href="">#숙소추천</a></li>
+                        <li><a href="">#휴식</a></li>
+                        <li><a href="">#자연여행</a></li>
                         <li><a href="">#제주여행</a></li>
                     </ul>
 
