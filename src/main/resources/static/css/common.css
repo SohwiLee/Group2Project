@@ -1,0 +1,8 @@
+*{margin:0;padding:0;list-style: none; text-decoration: none;}
+body{height:100vh;}
+.wrap{width:100vw;}
+a{display: block;}
+
+
+/*임시*/
+header,footer{height:100px;background:lightsteelblue;}
