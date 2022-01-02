@@ -1,1 +1,15 @@
-main{display:flex;}
+main{display:flex;width:960px;margin:0 auto;}
+
+.results{width:70%;}
+.results article{display: flex; width: 90%; padding: 20px; border-top:1px solid #666;border-bottom:1px solid #666;}
+.results article .img{margin-right:20px;}
+.results h2{padding: 30px 0;}
+
+.category{width:30%; background-color: #f7f7f7;}
+.category article{margin:0 30px; padding:30px 0;}
+.category .local {border-bottom:1px solid #999;}
+.category .local form{display:flex; flex-wrap:wrap;}
+.category .keywords{display: flex; flex-wrap:wrap;}
+.category label{padding:5px 15px; display: inline-block; color:#666; border-radius: 20px;}
+.category input[type=radio], .category input[type=checkbox]{display: none;}
+input[type=radio]:checked + label, input[type=checkbox]:checked ~ label{color:white; background:#57667e;}
