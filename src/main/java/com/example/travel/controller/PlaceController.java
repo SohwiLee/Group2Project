@@ -1,6 +1,7 @@
 package com.example.travel.controller;
 
 import com.example.travel.domain.Place;
+import com.example.travel.domain.PlaceRepository;
 import com.example.travel.domain.PlaceRequestDto;
 import com.example.travel.service.PlaceService;
 import lombok.RequiredArgsConstructor;

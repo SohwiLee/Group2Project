@@ -1,7 +1,11 @@
 <%@ page import="com.example.travel.domain.PlaceRequestDto" %>
 <%@ page import="com.example.travel.service.PlaceService" %>
 <%@ page import="com.example.travel.domain.PlaceRepository" %>
-<%@ page import="lombok.RequiredArgsConstructor" %><%--
+<%@ page import="lombok.RequiredArgsConstructor" %>
+<%@ page import="com.example.travel.domain.Place" %>
+<%@ page import="java.util.List" %>
+<%@ page import="org.springframework.beans.factory.annotation.Autowired" %>
+<%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: SH
   Date: 2022-01-01
@@ -30,21 +34,20 @@
     <main>
         <section class="results">
             <h2>#검색키워드</h2>
-
-<%--            <c:forEach var="places" items="${getPlaces()}">--%>
-<%--                <span>HHx`</span>--%>
-<%--            </c:forEach>--%>
+            <c:forEach var="i" items="${lists}">
             <article>
                 <div class="img">
                     <img src="/images/recommend/10.jpg" alt="여행지참고이미지">
                 </div>
                 <div class="contents">
-                    <h3>여행지 이름</h3>
-                    <p class="addr">주소</p>
-                    <p class="tel">전화번호</p>
-                    <p class="keywords">키워드</p>
+                    <h3><c:out value="${i.placename}"/></h3>
+                    <p class="addr"> <c:out value="${i.pos}"/></p>
+                    <p class="tel"> <c:out value="${i.tel}"/></p>
+                    <p class="keywords"> <c:out value="${i.keywords}"/></p>
                 </div>
             </article>
+            </c:forEach>
+
         </section>
         <section class="category">
             <article class="local">

@@ -1,7 +1,8 @@
 main{display:flex;width:960px;margin:0 auto;}
 
 .results{width:70%;}
-.results article{display: flex; width: 90%; padding: 20px; border-top:1px solid #666;border-bottom:1px solid #666;}
+.results article:first-child{ border-top:1px solid #999;}
+.results article{display: flex; width: 90%; padding: 20px;border-bottom:1px solid #999;}
 .results article .img{margin-right:20px;}
 .results h2{padding: 30px 0;}
 
