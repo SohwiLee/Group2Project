@@ -37,7 +37,8 @@
             <c:forEach var="i" items="${lists}">
             <article>
                 <div class="img">
-                    <img src="/images/recommend/10.jpg" alt="여행지참고이미지">
+
+                    <img src="<c:out value="${i.imglink}"/>" alt="<c:out value="${i.placename}"/>">
                 </div>
                 <div class="contents">
                     <h3><c:out value="${i.placename}"/></h3>

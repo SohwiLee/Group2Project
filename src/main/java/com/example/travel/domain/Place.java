@@ -22,13 +22,14 @@ public class Place {
 
     @NotNull
     @Column
-    private String placename,pos,keywords;
+    private String placename,pos,keywords,imglink;
 
     public Place(PlaceRequestDto dto){
         this.placename=dto.getPlacename();
         this.pos = dto.getPos();
         this.keywords=dto.getKeywords();
         this.tel=dto.getTel();
+        this.imglink=dto.getImglink();
     }
 
     public void update(PlaceRequestDto dto){
@@ -36,6 +37,7 @@ public class Place {
         this.pos = dto.getPos();
         this.keywords=dto.getKeywords();
         this.tel=dto.getTel();
+        this.imglink=dto.getImglink();
     }
 
 
