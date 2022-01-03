@@ -56,7 +56,7 @@
         <section class="category">
             <article class="local">
                 <form action="">
-                    <input type="radio" name="province" value="전체" id="all">
+                    <input type="radio" name="province" value="전체" id="all"checked>
                     <label for="all">#전체</label>
                     <input type="radio" name="province" value="서울특별시" id="01">
                     <label for="01">#서울 </label>
@@ -150,7 +150,6 @@
 
         </section>
     </main>
-<span class="dataSize" style="display:block"> ${fn:length(lists)}</span>
     <c:import url="footer.jsp"/>
 </div>
 
