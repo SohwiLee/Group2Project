@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
@@ -20,7 +21,8 @@ public class MainController {
 
 
     @GetMapping("/search")
-    public String search(Model model){
-        model.addAttribute("lists", repo.findAll());
-        return "search";}
+    public String search(HttpServletRequest request){
+        request.setAttribute("lists",repo.findAll());
+        return "search";
+    }
 }
