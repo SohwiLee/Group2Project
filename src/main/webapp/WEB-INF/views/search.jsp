@@ -94,44 +94,47 @@
             </article>
             <article class="keywords">
                 <form action="">
-                    <input type="checkbox" name="" id="겨울여행">
+                    <input type="checkbox" value="겨울여행" id="겨울여행">
                     <label for="겨울여행">#겨울여행</label>
                 </form>
                 <form action="">
-                    <input type="checkbox" name="" id="관광지">
+                    <input type="checkbox" value="관광지" id="관광지">
                     <label for="관광지">#관광지</label>
                 </form>
                 <form action="">
-                    <input type="checkbox" name="" id="데이트코스">
+                    <input type="checkbox" value="데이트코스" id="데이트코스">
                     <label for="데이트코스">#데이트코스</label>
                 </form>
                 <form action="">
-                    <input type="checkbox" name="" id="역사여행">
+                    <input type="checkbox" value="역사여행" id="역사여행">
                     <label for="역사여행">#역사여행</label>
                 </form>
                 <form action="">
-                    <input type="checkbox" name="" id="가족과함께">
+                    <input type="checkbox" value="가족과함께" id="가족과함께">
                     <label for="가족과함께">#가족과함께</label>
                 </form>
                 <form action="">
-                    <input type="checkbox" name="" id="휴식">
+                    <input type="checkbox" value="유네스코" id="휴식">
                     <label for="휴식">#휴식</label>
                 </form>
                 <form action="">
-                    <input type="checkbox" name="" id="유네스코">
+                    <input type="checkbox" value="유네스코" id="유네스코">
                     <label for="유네스코">#유네스코</label>
                 </form>
                 <form action="">
-                    <input type="checkbox" name="" id="이색체험">
+                    <input type="checkbox" value="이색체험" id="이색체험">
                     <label for="이색체험">#이색체험</label>
                 </form>
                 <form action="">
-                    <input type="checkbox" name="" id="제주여행">
+                    <input type="checkbox" value="제주여행" id="제주여행">
                     <label for="제주여행">#제주여행</label>
                 </form>
             </article>
             <article class="residence">
 
+            </article>
+            <article>
+                <button onclick="search()">search</button>
             </article>
 
         </section>
@@ -139,6 +142,45 @@
 
     <c:import url="footer.jsp"/>
 </div>
+<script>
+    function search(){
+        // 지역 select
+        const local = document.querySelector(".category .local input:checked").value;
+        // 키워드 select
+        const keysChoose=document.querySelectorAll(".category .keywords input:checked");
+        const keysArticle=document.querySelectorAll(".results .keywords");
 
+        let totalArr = new Array();
+        for(let i=0;i<document.querySelectorAll(".results article").length;i++){
+            let arr= new Array();
+            for(let j=0;j<keysArticle[i].textContent.split("#").length;j++){
+                let articleKey = keysArticle[i].textContent.split("#")[j];
+                arr.push(articleKey);
+            }
+            totalArr.push(arr);
+        }
+        // console.log(totalArr);
+
+        for(let i=0;i<totalArr.length;i++){
+            keysArticle[i].parentElement.parentElement.setAttribute('class','');
+            let cnt = 0;
+            for(let j=0;j<totalArr[i].length;j++){
+                for(let k=0;k<keysChoose.length;k++){
+                    if((keysChoose[k].value) === totalArr[i][j]){
+                        cnt++;
+                    }
+                }
+            }
+            if(cnt>0){
+                // console.log(keysChoose[k].value +", "+totalArr[i][j] );
+                keysArticle[i].parentElement.parentElement.setAttribute('class','');
+            }else{
+                keysArticle[i].parentElement.parentElement.setAttribute('class','hide');
+            }
+        }
+
+
+    }
+</script>
 </body>
 </html>
