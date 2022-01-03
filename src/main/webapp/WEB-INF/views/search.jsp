@@ -13,6 +13,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
@@ -34,10 +35,11 @@
 
     <main>
         <section class="results">
-            <h2>#검색키워드</h2>
+            <h2></h2>
             <c:forEach var="i" items="${lists}">
             <article>
                 <div class="img">
+
 
                     <img src="<c:out value="${i.imglink}"/>" alt="<c:out value="${i.placename}"/>">
                 </div>
@@ -54,15 +56,15 @@
         <section class="category">
             <article class="local">
                 <form action="">
-                    <input type="radio" name="province" value="전체" id="00">
-                    <label for="00">#전체</label>
-                    <input type="radio" name="province" value="서울" id="01">
+                    <input type="radio" name="province" value="전체" id="all">
+                    <label for="all">#전체</label>
+                    <input type="radio" name="province" value="서울특별시" id="01">
                     <label for="01">#서울 </label>
                     <input type="radio" name="province" value="부산" id="02">
                     <label for="02">#부산 </label>
-                    <input type="radio" name="province" value="대구" id="03">
+                    <input type="radio" name="province" value="대구광역시" id="03">
                     <label for="03">#대구</label>
-                    <input type="radio" name="province" value="인천" id="04">
+                    <input type="radio" name="province" value="인천광역시" id="04">
                     <label for="04">#인천</label>
                     <input type="radio" name="province" value="광주" id="05">
                     <label for="05">#광주</label>
@@ -70,25 +72,25 @@
                     <label for="06">#대전</label>
                     <input type="radio" name="province" value="울산" id="07">
                     <label for="07">#울산</label>
-                    <input type="radio" name="province" value="세종" id="08">
+                    <input type="radio" name="province" value="세종시" id="08">
                     <label for="08">#세종</label>
-                    <input type="radio" name="province" value="경기" id="09">
+                    <input type="radio" name="province" value="경기도" id="09">
                     <label for="09">#경기</label>
-                    <input type="radio" name="province" value="강원" id="10">
+                    <input type="radio" name="province" value="강원도" id="10">
                     <label for="10">#강원</label>
-                    <input type="radio" name="province" value="충북" id="11">
+                    <input type="radio" name="province" value="충청북도" id="11">
                     <label for="11">#충북</label>
-                    <input type="radio" name="province" value="충남" id="12">
+                    <input type="radio" name="province" value="충청남도" id="12">
                     <label for="12">#충남</label>
-                    <input type="radio" name="province" value="전북" id="13">
+                    <input type="radio" name="province" value="전라북도" id="13">
                     <label for="13">#전북</label>
-                    <input type="radio" name="province" value="전남" id="14">
+                    <input type="radio" name="province" value="전라남도" id="14">
                     <label for="14">#전남</label>
-                    <input type="radio" name="province" value="경북" id="15">
+                    <input type="radio" name="province" value="경상북도" id="15">
                     <label for="15">#경북</label>
-                    <input type="radio" name="province" value="경남" id="16">
+                    <input type="radio" name="province" value="경상남도" id="16">
                     <label for="16">#경남</label>
-                    <input type="radio" name="province" value="제주" id="17">
+                    <input type="radio" name="province" value="제주특별자치도" id="17">
                     <label for="17">#제주</label>
                 </form>
 
@@ -111,11 +113,11 @@
                     <label for="역사여행">#역사여행</label>
                 </form>
                 <form action="">
-                    <input type="checkbox" value="가족과함께" id="가족과함께">
-                    <label for="가족과함께">#가족과함께</label>
+                    <input type="checkbox" value="가족여행" id="가족여행">
+                    <label for="가족여행">#가족여행</label>
                 </form>
                 <form action="">
-                    <input type="checkbox" value="유네스코" id="휴식">
+                    <input type="checkbox" value="휴식" id="휴식">
                     <label for="휴식">#휴식</label>
                 </form>
                 <form action="">
@@ -130,6 +132,14 @@
                     <input type="checkbox" value="제주여행" id="제주여행">
                     <label for="제주여행">#제주여행</label>
                 </form>
+                <form action="">
+                    <input type="checkbox" value="연인과함께" id="연인과함께">
+                    <label for="연인과함께">#연인과함께</label>
+                </form>
+                <form action="">
+                    <input type="checkbox" value="수도권" id="수도권">
+                    <label for="수도권">#수도권</label>
+                </form>
             </article>
             <article class="residence">
 
@@ -140,8 +150,9 @@
 
         </section>
     </main>
-
+<span class="dataSize" style="display:block"> ${fn:length(lists)}</span>
     <c:import url="footer.jsp"/>
 </div>
+
 </body>
 </html>
