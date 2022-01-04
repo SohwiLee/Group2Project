@@ -26,9 +26,10 @@
         <section>
          <h2>공지사항</h2>
 
+
             <c:forEach var="i" items="${noticeList}">
             <article>
-                <a href="/notice/${i}">
+                <a href="notice/${i.code}">
                 <h3><c:out value="${i.title}"/> </h3>
                 <p><c:out value="${i.regdate}"/> </p>
                 </a>

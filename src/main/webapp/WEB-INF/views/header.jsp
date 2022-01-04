@@ -27,7 +27,7 @@
         <ul><li><a href="/search">검색</a></li></ul>
         <ul><li><a href="/festival">축제정보</a></li></ul>
         <ul><li><a href="/event">이벤트</a></li></ul>
-        <ul><li><a href="/notice">공지사항</a></li></ul>
+        <ul><li><a href="/notices">공지사항</a></li></ul>
     </nav>
 </header>
 </body>

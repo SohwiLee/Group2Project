@@ -51,7 +51,7 @@
         <section class="infos">
             <div>
             <article class="notice">
-                <div class="title"> <h3>공지사항</h3> <p><a href="/notice">+</a></p></div>
+                <div class="title"> <h3>공지사항</h3> <p><a href="/notices">+</a></p></div>
 
                 <table>
                     <tr><td>글제목...</td><td>날짜</td></tr>

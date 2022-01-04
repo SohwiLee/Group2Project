@@ -1,20 +1,20 @@
 package com.example.travel.controller;
 
-import com.example.travel.domain.NoticeRepository;
-import com.example.travel.domain.PlaceRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.travel.domain.Place;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
+@RequiredArgsConstructor
 @Controller
 public class MainController {
 
-    @Autowired
-    PlaceRepository repoP;
-    @Autowired
-    NoticeRepository repoN;
+    private final PlaceController pController;
+    private final NoticeController nController;
 
     @GetMapping("/")
     public String index() {
@@ -22,25 +22,19 @@ public class MainController {
     }
 
     @GetMapping("/search")
-    public String search(HttpServletRequest request) {
-        request.setAttribute("lists", repoP.findAll());
-        return "search";
+    public List<Place> search() {
+        return pController.getPlaces();
     }
 
-    @GetMapping("/notice")
+    @GetMapping("/notices")
     public String notice(HttpServletRequest request) {
-        if(repoN.findAll()!=null){
-        request.setAttribute("noticeList", repoN.findAll());
-        }
-
-        return "notice";
+        return nController.getNotices(request);
     }
 
-
-//    @GetMapping("/notice/")
-//    public String noticeView(){
-//        return "noticeView";
-//    }
+    @GetMapping("/notice/{code}")
+    public String noticeDetail(HttpServletRequest request, @PathVariable int code){
+        return nController.getNotice(request, code);
+    }
 
     @GetMapping("/noticeWrite")
     public String noticeWrite() {

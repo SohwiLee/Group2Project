@@ -24,13 +24,26 @@
     <c:import url="header.jsp"/>
     <main>
         <section>
-         <h2>공지사항</h2>
+            <h2>공지사항</h2>
 
-           <table>
-               <thead>
-               <tr> <td>title</td></tr>
-               </thead>
-           </table>
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                       <h3> ${title}</h3>
+                    </td>
+                </tr>
+                <tr> <td>${regdate}</td></tr>
+                <tr> <td>${content}</td></tr>
+                <tr> <td>좋아요 추가 </td></tr>
+                <tr> <td>조회수 추가 </td></tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <%-- admin일 때만 보이기--%>
+            <button>수정</button>
+            <a href="/notices">목록으로</a>
         </section>
     </main>
     <c:import url="footer.jsp"/>

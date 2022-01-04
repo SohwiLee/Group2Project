@@ -6,6 +6,7 @@ import com.example.travel.service.NoticeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -19,9 +20,20 @@ public class NoticeController {
 
     //read
     @GetMapping("v1/notices/{code}")
-    public Notice getNotice(@PathVariable int code){return service.getNotice(code);}
+    public String getNotice(HttpServletRequest request, @PathVariable int code){
+        Notice notice = service.getNotice(code);
+        request.setAttribute("code",notice.getCode());
+        request.setAttribute("title",notice.getTitle());
+        request.setAttribute("content",notice.getContent());
+        request.setAttribute("regdate",notice.getRegdate());
+        return "noticeView";
+    }
     @GetMapping("v1/notices")
-    public List<Notice> getNotices(){return service.getNotices();}
+    public String getNotices(HttpServletRequest request){
+        List<Notice> notices = service.getNotices();
+        request.setAttribute("noticeList",notices);
+        return "notice";
+    }
 
     //update
     @PutMapping("v1/notices/{code}")
