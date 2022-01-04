@@ -30,22 +30,40 @@
                 <div class="title"><h2>테마여행</h2> <p><a href="/search">더 자세히 검색하기</a></p></div>
                 <div class="lists">
                     <ul>
-                        <li><a href="">#가족여행</a></li>
+                        <li><a href="">#가족과함께</a></li>
+                        <li><a href="">#연인과함께</a></li>
                         <li><a href="">#당일치기</a></li>
                         <li><a href="">#축제</a></li>
                         <li><a href="">#역사여행</a></li>
-                        <li><a href="">#로맨틱_야경</a></li>
-                        <li><a href="">#데이트_코스</a></li>
+                        <li><a href="">#로맨틱야경</a></li>
+                        <li><a href="">#데이트코스</a></li>
                         <li><a href="">#휴식</a></li>
                         <li><a href="">#자연여행</a></li>
+                        <li><a href="">#역사여행</a></li>
+                        <li><a href="">#유네스코</a></li>
                         <li><a href="">#제주여행</a></li>
                     </ul>
 
                 </div>
             </article>
         </section>
-        <section class="infos"></section>
-        <section class="recommend"></section>
+        <section class="infos">
+            <div>
+            <article class="notice">
+                <h3>공지사항</h3>
+                <table>
+                    <tr><td>글제목...</td><td>날짜</td></tr>
+                    <tr><td>글제목...</td><td>날짜</td></tr>
+                    <tr><td>글제목...</td><td>날짜</td></tr>
+                    <tr><td>글제목...</td><td>날짜</td></tr>
+                    <tr><td>글제목...</td><td>날짜</td></tr>
+                </table>
+            </article>
+            <article class="festival">
+                <h3>축제정보</h3>
+            </article>
+            </div>
+        </section>
     </main>
 
     <c:import url="footer.jsp"/>
