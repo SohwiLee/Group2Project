@@ -20,7 +20,7 @@ function search() {
     let posArr = [];//위치 t,f
     let keyArr = [];//키워드 t,f
 
-    let idx=-1;
+    let idx = -1;
 
     let lists = []; // 데이터리스트
     $.ajax({
@@ -43,36 +43,60 @@ function search() {
         }
 
 
-
-        let isSame=false;
+        let isSame = false;
         // 데이터 key들
-        for(let i=0;i<lists.length;i++){
+        for (let i = 0; i < lists.length; i++) {
             //console.log(lists[i].keywords.split("#"));
-            for(let j=0;j<lists[i].keywords.split("#").length;j++){
+            for (let j = 0; j < lists[i].keywords.split("#").length; j++) {
                 for (let k = 0; k < keysChoose.length; k++) {
                     // console.log(lists[i].keywords.split("#")[j]+"//"+keysChoose[k].value);
-                    if(lists[i].keywords.split("#")[j]==keysChoose[k].value){
-                        isSame=true;
+                    if (lists[i].keywords.split("#")[j] == keysChoose[k].value) {
+                        isSame = true;
                     }
                 }
             }
-            if(isSame){keyArr.push(true);}else{keyArr.push(false);}
+            if (isSame) {
+                keyArr.push(true);
+            } else {
+                keyArr.push(false);
+            }
         }
-console.log(posArr);
-console.log(keyArr);
+        // console.log(posArr);
+        // console.log(keyArr);
 
-for(let i=0;i<posArr.length;i++){
-    if(posArr[i] && keyArr[i]){
-        // i번째 리스트들을 뽑아준다~!
-        console.log(lists[i].placename);
-        console.log(lists[i].tel);
-        console.log(lists[i].pos);
-        console.log(lists[i].keywords);
-        console.log();
-        // html article 전부 지우고 데이터 뿌려주기
+        //const resultSec = document.querySelector("section.results");
+        const resultSec = $("section.results");
+        // 태그 초기화
+        const articles = document.querySelectorAll(".results article");
+        for (let j = 0; j < articles.length; j++) {
+            articles[j].remove();
+        }
+        for (let i = 0; i < posArr.length; i++) {
 
-    }
-}
+
+            if (posArr[i] && keyArr[i]) {
+                // i번째 리스트들을 뽑아준다~!
+                console.log(lists[i].placename);
+                console.log(lists[i].tel);
+                console.log(lists[i].pos);
+                console.log(lists[i].keywords);
+                // console.log(lists[i].imglink);
+                // html article 전부 지우고 데이터 뿌려주기
+                const getName = lists[i].placename;
+                const getTel = lists[i].tel;
+                const getPos = lists[i].pos;
+                const getKey = lists[i].keywords;
+                const getLink = lists[i].imglink;
+
+
+                // 페이지에 태그생성
+                resultSec.append(
+                    "<article><div class='img'><img src='" + getLink + "' alt='" + getName + "'></div><div class='contents'><h3>" + getName + "</h3><p class='addr'>" + getPos + "</p><p class='tel'>" + getTel + "</p><p class='keywords'>" + getKey + "</p></div></article>"
+                );
+
+
+            }
+        }
 
 
     });
