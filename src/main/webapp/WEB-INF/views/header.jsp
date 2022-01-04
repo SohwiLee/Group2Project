@@ -20,14 +20,15 @@
        <li><a href="join">회원가입</a></li>
     </ul>
     <h1><a href="/">TourGuide</a></h1>
-    <button class="open"></button>
-<%--    <nav>--%>
-<%--        <ul><li><a href="">로그인</a></li></ul>--%>
-<%--        <ul><li><a href="">검색</a></li></ul>--%>
-<%--        <ul><li><a href="">축제정보</a></li></ul>--%>
-<%--        <ul><li><a href="">이벤트</a></li></ul>--%>
-<%--        <ul><li><a href="">공지사항</a></li></ul>--%>
-<%--    </nav>--%>
+    <button class="open navBtn" onclick="btnOpen()">메뉴</button>
+    <nav>
+        <button class="close navBtn" onclick="btnClose()">닫기</button>
+        <ul><li><a href="/login">로그인</a></li></ul>
+        <ul><li><a href="/search">검색</a></li></ul>
+        <ul><li><a href="/festival">축제정보</a></li></ul>
+        <ul><li><a href="/event">이벤트</a></li></ul>
+        <ul><li><a href="/notice">공지사항</a></li></ul>
+    </nav>
 </header>
 </body>
 </html>

@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <title>index</title>
 </head>
 <body>
@@ -50,7 +51,8 @@
         <section class="infos">
             <div>
             <article class="notice">
-                <h3>공지사항</h3>
+                <div class="title"> <h3>공지사항</h3> <p><a href="/notice">+</a></p></div>
+
                 <table>
                     <tr><td>글제목...</td><td>날짜</td></tr>
                     <tr><td>글제목...</td><td>날짜</td></tr>
@@ -60,7 +62,7 @@
                 </table>
             </article>
             <article class="festival">
-                <h3>축제정보</h3>
+                <div class="title"> <h3>축제정보</h3> <p><a href="/festival">+</a></p></div>
             </article>
             </div>
         </section>

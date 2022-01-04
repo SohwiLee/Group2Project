@@ -17,12 +17,16 @@ header h1{text-align:center;line-height:100px;}
 .users, nav{position:absolute; z-index: 5;}
 .users{left:10vw;top:calc(0% + 45px - 1em); display: flex;}
 .users a{padding:10px 18px;}
-nav{right:0;top:0;background-color: gray;}
+nav{right:3vw;top:calc(100px - 100px * 0.6 - 18%); background-color: gray; overflow: hidden;}
+nav a{padding:20px 60px 20px 30px; text-align: center;width:140px;}
 
-.open{
+.open{ right:3vw;top:calc(100px - 100px * 0.6 - 18%); }
+.close{right:0;top:0; background:transparent;}
+.navBtn{
     width:calc(100px * 0.6);height:calc(100px*0.6);
-    position:absolute;right:3vw;top:calc(100px - 100px * 0.6 - 18%);z-index: 5;
+    position:absolute;   z-index: 5;
     border:1px solid transparent;
     border-radius: 10px;
     cursor:pointer;
 }
+.none{display:none;}

@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/board.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <title>Notice</title>
+    <title>NoticeView</title>
 </head>
 <body>
 <div class="wrap board">
@@ -26,14 +26,11 @@
         <section>
          <h2>공지사항</h2>
 
-            <c:forEach var="i" items="${noticeList}">
-            <article>
-                <a href="/notice/${i}">
-                <h3><c:out value="${i.title}"/> </h3>
-                <p><c:out value="${i.regdate}"/> </p>
-                </a>
-            </article>
-            </c:forEach>
+           <table>
+               <thead>
+               <tr> <td>title</td></tr>
+               </thead>
+           </table>
         </section>
     </main>
     <c:import url="footer.jsp"/>
