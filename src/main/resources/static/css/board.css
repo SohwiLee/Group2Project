@@ -4,4 +4,7 @@ h2{margin-bottom:30px;}
 article{border-top:0.5px solid #999; border-bottom:0.5px solid #999; padding:20px;}
 
 h3{margin-bottom:8px;font-size:1.5em;}
-p{font-size:1em;}
+.counts{display:flex; justify-content: space-between;font-size:1.2em;}
+.likes{}
+.heart{color:red;}
+.viewCount img{width:25px;vertical-align: bottom; margin-left:5px; margin-right:3px;}

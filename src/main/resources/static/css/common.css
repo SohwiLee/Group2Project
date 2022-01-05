@@ -1,15 +1,15 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;400;500;600&family=Josefin+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');*/
-@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;400;500;600&family=Luxurious+Roman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;400;500;600&family=Josefin+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;400;500;600&family=Luxurious+Roman&display=swap');*/
 *{margin:0;padding:0;list-style: none; text-decoration: none;
-    /*font-family: 'Hahmlet', serif; font-family: 'Josefin Sans', sans-serif;*/
-    font-family: 'Hahmlet', serif; font-family: 'Luxurious Roman', sans-serif;
+    font-family: 'Hahmlet', serif; font-family: 'Josefin Sans', sans-serif;
+    /*font-family: 'Hahmlet', serif; font-family: 'Luxurious Roman', sans-serif;*/
 }
 .wrap{width:100%;height:100%;}
 a{display: block;}
 
 
 /*임시*/
-header,footer{height:100px;background:lightsteelblue;}
+header,footer{height:100px;background:#98DDCA;}
 
 /*header*/
 header{position:relative;}
@@ -17,7 +17,7 @@ header h1{text-align:center;line-height:100px;}
 .users, nav{position:absolute; z-index: 5;}
 .users{left:10vw;top:calc(0% + 45px - 1em); display: flex;}
 .users a{padding:10px 18px;}
-nav{right:3vw;top:calc(100px - 100px * 0.6 - 18%); background-color: gray; overflow: hidden;}
+nav{width:0;height:0;right:3vw;top:calc(100px - 100px * 0.6 - 18%);  border-radius: 10px; background-color: #CDF0EA; overflow: hidden;}
 nav a{padding:20px 60px 20px 30px; text-align: center;width:140px;}
 
 .open{ right:3vw;top:calc(100px - 100px * 0.6 - 18%); }
@@ -29,4 +29,13 @@ nav a{padding:20px 60px 20px 30px; text-align: center;width:140px;}
     border-radius: 10px;
     cursor:pointer;
 }
-.none{display:none;}
+.none{width:0;height:0;animation:close 0.4s ease-in-out forwards;}
+.navShow{width:230px; height:310px; animation:open 0.4s ease-in-out forwards;}
+@keyframes close{
+    from{width:230px; height:310px;}
+    to{width:0;height:0;}
+}
+@keyframes open{
+    from{width:0;height:0;}
+    to{width:230px; height:310px;}
+}

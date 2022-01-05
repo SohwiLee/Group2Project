@@ -25,16 +25,21 @@
     <main>
         <section>
          <h2>공지사항</h2>
-
-
             <c:forEach var="i" items="${noticeList}">
             <article>
-                <a href="notice/${i.code}">
+                <a href="notice/${i.code}" onclick="">
                 <h3><c:out value="${i.title}"/> </h3>
-                <p><c:out value="${i.regdate}"/> </p>
+                <div class="counts">
+                   <p><c:out value="${i.regdate}"/></p>
+                   <p> <span class="likes"><span class="heart">♥</span><c:out value="${i.likes}"/> </span> <span class="viewCount"><img class="eye" src="https://www.freeiconspng.com/uploads/eyeball-icon-png-eye-icon-1.png"></img><c:out value="${i.viewcount}"/> </span> </p>
+                </div>
                 </a>
             </article>
             </c:forEach>
+        </section>
+        <section>
+        <%--admin일때만--%>
+            <a href="/noticeWrite">글쓰기</a>
         </section>
     </main>
     <c:import url="footer.jsp"/>

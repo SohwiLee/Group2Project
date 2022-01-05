@@ -17,32 +17,29 @@
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/board.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <title>NoticeView</title>
+    <title>Event</title>
 </head>
 <body>
 <div class="wrap board">
     <c:import url="header.jsp"/>
     <main>
         <section>
-            <h2>공지사항</h2>
-            <table>
-                <tbody>
-                <tr>
-                    <td>
-                       <h3> ${title}</h3>
-                    </td>
-                </tr>
-                <tr> <td>${regdate}</td></tr>
-                <tr> <td>${content}</td></tr>
-                <tr> <td>${likes}</td></tr>
-                <tr> <td>${viewcount}</td></tr>
-                </tbody>
-            </table>
+         <h2>이벤트</h2>
+            <c:forEach var="i" items="${noticeList}">
+            <article>
+                <a href="notice/${i.code}" onclick="">
+                <h3><c:out value="${i.title}"/> </h3>
+                <div class="counts">
+                   <p><c:out value="${i.regdate}"/></p>
+                   <p> <span class="likes"><span class="heart">♥</span><c:out value="${i.likes}"/> </span> <span class="viewCount"><img class="eye" src="https://www.freeiconspng.com/uploads/eyeball-icon-png-eye-icon-1.png"></img><c:out value="${i.viewcount}"/> </span> </p>
+                </div>
+                </a>
+            </article>
+            </c:forEach>
         </section>
         <section>
-            <%-- admin일 때만 보이기--%>
-            <button >수정</button>
-            <a href="/notices">목록으로</a>
+        <%--admin일때만--%>
+            <a href="/noticeWrite">글쓰기</a>
         </section>
     </main>
     <c:import url="footer.jsp"/>

@@ -21,7 +21,7 @@
     </ul>
     <h1><a href="/">TourGuide</a></h1>
     <button class="open navBtn" onclick="btnOpen()">메뉴</button>
-    <nav>
+    <nav class="">
         <button class="close navBtn" onclick="btnClose()">닫기</button>
         <ul><li><a href="/login">로그인</a></li></ul>
         <ul><li><a href="/search">검색</a></li></ul>

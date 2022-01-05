@@ -71,5 +71,28 @@
     <c:import url="footer.jsp"/>
 </div>
 
+
+<script>
+
+    let arr=[];
+    $.ajax({
+        url:"http://api.kcisa.kr/openapi/service/rest/meta/KOLfest?serviceKey=457527fa-9844-48ec-a918-51c8fdb31866&numOfRows=5&pageNo=1",
+        type:"get",
+        dataType:"json",
+        data:{
+            numOfRows:5,
+            pageNo:1
+        },
+        contentType:"application/json"
+    }).done(body =>{
+
+    console.log(body)
+
+
+    });
+
+
+</script>
+
 </body>
 </html>

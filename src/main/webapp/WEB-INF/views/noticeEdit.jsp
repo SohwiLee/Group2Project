@@ -17,32 +17,31 @@
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/board.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <title>NoticeView</title>
+    <title>NoticeEdit</title>
 </head>
 <body>
 <div class="wrap board">
     <c:import url="header.jsp"/>
     <main>
         <section>
-            <h2>공지사항</h2>
+            <h2>공지사항 - 수정</h2>
             <table>
                 <tbody>
                 <tr>
                     <td>
-                       <h3> ${title}</h3>
+                       <h3><input type="text" value="${title}"></h3>
                     </td>
                 </tr>
                 <tr> <td>${regdate}</td></tr>
-                <tr> <td>${content}</td></tr>
+                <tr> <td><textarea name="" id="" cols="30" rows="10">${content}</textarea> </td></tr>
                 <tr> <td>${likes}</td></tr>
                 <tr> <td>${viewcount}</td></tr>
                 </tbody>
             </table>
         </section>
         <section>
-            <%-- admin일 때만 보이기--%>
-            <button >수정</button>
-            <a href="/notices">목록으로</a>
+            <button>수정완료</button>
+            <a href="/notices">취소</a>
         </section>
     </main>
     <c:import url="footer.jsp"/>

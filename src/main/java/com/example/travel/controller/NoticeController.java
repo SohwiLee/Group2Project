@@ -16,7 +16,10 @@ public class NoticeController {
 
     //create
     @PostMapping("v1/notices")
-    public Notice addNotice(@RequestBody NoticeRequestDto dto){return service.addNotice(dto);}
+    public String addNotice(HttpServletRequest request, NoticeRequestDto dto) {
+        Notice add = service.addNotice(dto);
+        return getNotices(request);
+    }
 
     //read
     @GetMapping("v1/notices/{code}")
@@ -26,6 +29,8 @@ public class NoticeController {
         request.setAttribute("title",notice.getTitle());
         request.setAttribute("content",notice.getContent());
         request.setAttribute("regdate",notice.getRegdate());
+        request.setAttribute("viewcount",notice.getViewcount());
+        request.setAttribute("likes",notice.getLikes());
         return "noticeView";
     }
     @GetMapping("v1/notices")
@@ -44,4 +49,5 @@ public class NoticeController {
     //delete
     @DeleteMapping("v1/notices/{code}")
     public int deleteNotice(@PathVariable int code){return service.deleteNotice(code);}
+
 }

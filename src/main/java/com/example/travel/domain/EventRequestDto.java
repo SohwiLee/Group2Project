@@ -8,13 +8,11 @@ import java.util.Calendar;
 
 @NoArgsConstructor
 @Getter
-public class NoticeRequestDto {
+public class EventRequestDto {
     private int code, viewcount, likes;
     private String title, content;
     private Timestamp regdate;
-
-
-    private NoticeRequestDto(int code, String title, Timestamp regdate, int viewcount, int likes) {
+    private EventRequestDto(int code, String title, Timestamp regdate, int viewcount, int likes) {
         this.code = code;
         this.title = title;
         this.regdate = regdate;
@@ -22,7 +20,7 @@ public class NoticeRequestDto {
         this.likes=likes;
     }
 
-    private NoticeRequestDto(int code, String title, String content, Timestamp regdate,int viewcount, int likes) {
+    private EventRequestDto(int code, String title, String content, Timestamp regdate,int viewcount, int likes) {
         this.code = code;
         this.title = title;
         this.content = content;
@@ -31,7 +29,7 @@ public class NoticeRequestDto {
         this.likes=likes;
     }
 
-    public NoticeRequestDto(String title, String content) {
+    public EventRequestDto(String title, String content) {
         this.title = title;
         this.content = content;
         this.regdate = new Timestamp(Calendar.getInstance().getTimeInMillis());

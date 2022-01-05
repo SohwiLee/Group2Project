@@ -1,5 +1,7 @@
 package com.example.travel.controller;
 
+import com.example.travel.domain.Notice;
+import com.example.travel.domain.NoticeRequestDto;
 import com.example.travel.domain.Place;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -8,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
+
 
 @RequiredArgsConstructor
 @Controller
@@ -40,4 +43,14 @@ public class MainController {
     public String noticeWrite() {
         return "../writes/noticeWrite";
     }
+
+
+    @GetMapping("/addNotice")
+    public String addNotice(HttpServletRequest request,String title, String content){
+        title=request.getParameter("title");
+        content=request.getParameter("content");
+        return nController.addNotice(request, new NoticeRequestDto(title,content));
+//        return nController.addNotice();
+    }
+
 }

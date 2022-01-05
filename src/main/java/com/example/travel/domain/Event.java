@@ -12,9 +12,9 @@ import java.sql.Timestamp;
 
 @NoArgsConstructor
 @Getter
-@Table(name="notice")
+@Table(name="event")
 @Entity
-public class Notice {
+public class Event {
     @Id
     private int code;
 
@@ -24,7 +24,7 @@ public class Notice {
     private Timestamp regdate;
     private int viewcount, likes;
 
-    public Notice(NoticeRequestDto dto) {
+    public Event(EventRequestDto dto) {
         this.title = dto.getTitle();
         this.content = dto.getContent();
         this.regdate = dto.getRegdate();
@@ -32,16 +32,15 @@ public class Notice {
         this.likes = dto.getLikes();
     }
 
-    public void update(NoticeRequestDto dto) {
+    public void update(EventRequestDto dto) {
         this.title = dto.getTitle();
         this.content = dto.getContent();
         this.viewcount = dto.getViewcount();
         this.likes = dto.getLikes();
     }
 
-    public void add(NoticeRequestDto dto) {
+    public void add(EventRequestDto dto) {
         this.title = dto.getTitle();
         this.content = dto.getContent();
     }
-
 }
