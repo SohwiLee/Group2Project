@@ -1,7 +1,7 @@
 package com.example.travel.controller;
 
-import com.example.travel.domain.User;
-import com.example.travel.domain.UserRequestDto;
+import com.example.travel.domain.user.User;
+import com.example.travel.domain.user.UserRequestDto;
 import com.example.travel.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

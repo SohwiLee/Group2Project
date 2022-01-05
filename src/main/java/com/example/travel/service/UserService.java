@@ -1,10 +1,9 @@
 package com.example.travel.service;
 
-import com.example.travel.domain.User;
-import com.example.travel.domain.UserRepository;
-import com.example.travel.domain.UserRequestDto;
+import com.example.travel.domain.user.User;
+import com.example.travel.domain.user.UserRepository;
+import com.example.travel.domain.user.UserRequestDto;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;

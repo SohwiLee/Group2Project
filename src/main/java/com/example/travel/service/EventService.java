@@ -1,8 +1,8 @@
 package com.example.travel.service;
 
-import com.example.travel.domain.Event;
-import com.example.travel.domain.EventRepository;
-import com.example.travel.domain.EventRequestDto;
+import com.example.travel.domain.event.Event;
+import com.example.travel.domain.event.EventRepository;
+import com.example.travel.domain.event.EventRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

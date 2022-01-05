@@ -1,8 +1,8 @@
 package com.example.travel.service;
 
-import com.example.travel.domain.Place;
-import com.example.travel.domain.PlaceRepository;
-import com.example.travel.domain.PlaceRequestDto;
+import com.example.travel.domain.place.Place;
+import com.example.travel.domain.place.PlaceRepository;
+import com.example.travel.domain.place.PlaceRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

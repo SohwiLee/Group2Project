@@ -41,7 +41,7 @@
         </section>
         <section>
             <%-- admin일 때만 보이기--%>
-            <button >수정</button>
+            <a href="/notice/${code}/edit">수정</a>
             <a href="/notices">목록으로</a>
         </section>
     </main>

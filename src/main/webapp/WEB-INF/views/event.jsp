@@ -25,9 +25,9 @@
     <main>
         <section>
          <h2>이벤트</h2>
-            <c:forEach var="i" items="${noticeList}">
+            <c:forEach var="i" items="${lists}">
             <article>
-                <a href="notice/${i.code}" onclick="">
+                <a href="event/${i.code}" onclick="">
                 <h3><c:out value="${i.title}"/> </h3>
                 <div class="counts">
                    <p><c:out value="${i.regdate}"/></p>

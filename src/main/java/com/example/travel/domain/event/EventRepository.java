@@ -1,4 +1,4 @@
-package com.example.travel.domain;
+package com.example.travel.domain.event;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

@@ -1,4 +1,4 @@
-package com.example.travel.domain;
+package com.example.travel.domain.user;
 
 import com.example.travel.util.Timestmped;
 import com.sun.istack.NotNull;

@@ -54,11 +54,9 @@
                 <div class="title"> <h3>공지사항</h3> <p><a href="/notices">+</a></p></div>
 
                 <table>
-                    <tr><td>글제목...</td><td>날짜</td></tr>
-                    <tr><td>글제목...</td><td>날짜</td></tr>
-                    <tr><td>글제목...</td><td>날짜</td></tr>
-                    <tr><td>글제목...</td><td>날짜</td></tr>
-                    <tr><td>글제목...</td><td>날짜</td></tr>
+<%--                    <c:forEach var="i" end="4" items="${noticeList}">--%>
+<%--                    <tr><td>${i.title}</td><td>${i.regdate}</td></tr>--%>
+<%--                    </c:forEach>--%>
                 </table>
             </article>
             <article class="festival">
@@ -71,28 +69,6 @@
     <c:import url="footer.jsp"/>
 </div>
 
-
-<script>
-
-    let arr=[];
-    $.ajax({
-        url:"http://api.kcisa.kr/openapi/service/rest/meta/KOLfest?serviceKey=457527fa-9844-48ec-a918-51c8fdb31866&numOfRows=5&pageNo=1",
-        type:"get",
-        dataType:"json",
-        data:{
-            numOfRows:5,
-            pageNo:1
-        },
-        contentType:"application/json"
-    }).done(body =>{
-
-    console.log(body)
-
-
-    });
-
-
-</script>
 
 </body>
 </html>

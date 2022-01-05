@@ -1,4 +1,4 @@
-package com.example.travel.domain;
+package com.example.travel.domain.place;
 
 import com.sun.istack.NotNull;
 import lombok.Getter;

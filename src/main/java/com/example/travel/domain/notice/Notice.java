@@ -1,4 +1,4 @@
-package com.example.travel.domain;
+package com.example.travel.domain.notice;
 
 import com.sun.istack.NotNull;
 import lombok.Getter;
@@ -12,9 +12,9 @@ import java.sql.Timestamp;
 
 @NoArgsConstructor
 @Getter
-@Table(name="event")
+@Table(name="notice")
 @Entity
-public class Event {
+public class Notice {
     @Id
     private int code;
 
@@ -24,7 +24,7 @@ public class Event {
     private Timestamp regdate;
     private int viewcount, likes;
 
-    public Event(EventRequestDto dto) {
+    public Notice(NoticeRequestDto dto) {
         this.title = dto.getTitle();
         this.content = dto.getContent();
         this.regdate = dto.getRegdate();
@@ -32,15 +32,16 @@ public class Event {
         this.likes = dto.getLikes();
     }
 
-    public void update(EventRequestDto dto) {
+    public void update(NoticeRequestDto dto) {
         this.title = dto.getTitle();
         this.content = dto.getContent();
         this.viewcount = dto.getViewcount();
         this.likes = dto.getLikes();
     }
 
-    public void add(EventRequestDto dto) {
+    public void add(NoticeRequestDto dto) {
         this.title = dto.getTitle();
         this.content = dto.getContent();
     }
+
 }

@@ -1,4 +1,4 @@
-package com.example.travel.domain;
+package com.example.travel.domain.notice;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,7 +22,7 @@ public class NoticeRequestDto {
         this.likes=likes;
     }
 
-    private NoticeRequestDto(int code, String title, String content, Timestamp regdate,int viewcount, int likes) {
+    public NoticeRequestDto(int code, String title, String content, Timestamp regdate, int viewcount, int likes) {
         this.code = code;
         this.title = title;
         this.content = content;

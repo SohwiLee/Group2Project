@@ -1,7 +1,7 @@
 package com.example.travel.controller;
 
-import com.example.travel.domain.Notice;
-import com.example.travel.domain.NoticeRequestDto;
+import com.example.travel.domain.notice.Notice;
+import com.example.travel.domain.notice.NoticeRequestDto;
 import com.example.travel.service.NoticeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -17,11 +17,12 @@ public class NoticeController {
     //create
     @PostMapping("v1/notices")
     public String addNotice(HttpServletRequest request, NoticeRequestDto dto) {
-        Notice add = service.addNotice(dto);
+        service.addNotice(dto);
         return getNotices(request);
     }
 
     //read
+
     @GetMapping("v1/notices/{code}")
     public String getNotice(HttpServletRequest request, @PathVariable int code){
         Notice notice = service.getNotice(code);
@@ -33,6 +34,17 @@ public class NoticeController {
         request.setAttribute("likes",notice.getLikes());
         return "noticeView";
     }
+    @GetMapping("v1/notice/{code}")
+    public String getNoticeE(HttpServletRequest request, @PathVariable int code){
+        Notice notice = service.getNotice(code);
+        request.setAttribute("code",notice.getCode());
+        request.setAttribute("title",notice.getTitle());
+        request.setAttribute("content",notice.getContent());
+        request.setAttribute("regdate",notice.getRegdate());
+        request.setAttribute("viewcount",notice.getViewcount());
+        request.setAttribute("likes",notice.getLikes());
+        return "noticeEdit";
+    }
     @GetMapping("v1/notices")
     public String getNotices(HttpServletRequest request){
         List<Notice> notices = service.getNotices();
@@ -40,14 +52,24 @@ public class NoticeController {
         return "notice";
     }
 
+
     //update
     @PutMapping("v1/notices/{code}")
-    public Notice updateNotice(@PathVariable int code, @RequestBody NoticeRequestDto dto){
-        return service.updateNotice(code,dto);
+    public String updateNotice(HttpServletRequest request, @PathVariable int code){
+        Notice n = service.getNotice(code);
+        String title = request.getParameter("title");
+        String content = request.getParameter("content");
+        NoticeRequestDto dto = new NoticeRequestDto(n.getCode(), title,content,n.getRegdate(),n.getViewcount(),n.getLikes());
+        service.updateNotice(code,dto);
+        return getNotice(request, code);
     }
 
     //delete
     @DeleteMapping("v1/notices/{code}")
-    public int deleteNotice(@PathVariable int code){return service.deleteNotice(code);}
+    public int deleteNotice(@PathVariable int code) {
+        //code = (int) request.getAttribute("code");
+        return service.deleteNotice(code);
+
+    }
 
 }

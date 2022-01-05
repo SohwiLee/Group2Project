@@ -1,8 +1,8 @@
 package com.example.travel.service;
 
-import com.example.travel.domain.Notice;
-import com.example.travel.domain.NoticeRepository;
-import com.example.travel.domain.NoticeRequestDto;
+import com.example.travel.domain.notice.Notice;
+import com.example.travel.domain.notice.NoticeRepository;
+import com.example.travel.domain.notice.NoticeRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -48,8 +48,10 @@ public class NoticeService {
 
     //delete
     public int deleteNotice(int code){
-        Notice notice = getNotice(code);
-        repo.deleteById(notice.getCode());
-        return notice.getCode();
+//        Notice notice = getNotice(code);
+//        repo.deleteById(notice.getCode());
+//        return notice.getCode();
+        repo.deleteById(code);
+        return code;
     }
 }
