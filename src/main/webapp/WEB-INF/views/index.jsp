@@ -16,6 +16,40 @@
 <div class="wrap index">
     <c:import url="header.jsp"/>
     <main>
+        <section>
+
+
+            <form method="get" action="login">
+                <input type="hidden" id="hidden">
+                <c:out value="${sessionScope.log}"/>
+                <c:choose>
+                    <c:when test="${empty sessionScope.log}">
+                        <input type="button" onclick="submit()" value="로그인하기" id="login"><br>
+                        <c:url var="path" value="join"/>
+                        <input type="button" onclick="location.href='${path}'" value="회원가입" id="join"><br>
+
+                    </c:when>
+                    <c:otherwise>
+                        <c:url var="logout" value="logout"/>
+                        <c:url var="delete" value="delete"/>
+                        <c:url var="update" value="update"/>
+                        <input type="button" onclick="location.href='${logout}'" value="로그아웃" id="logout"><br>
+                        <input type="button" onclick="location.href='${delete}'" value="회원탈퇴" id="delete"><br>
+                        <input type="button" onclick="location.href='${update}'" value="정보수정" id="update"><br>
+
+                    </c:otherwise>
+                </c:choose>
+            </form>
+            <h1>여기는 index 페이지3333</h1>
+            <c:url var="joinAgree" value="joinAgree"/>
+            <input type="button" onclick="location.href='${joinAgree}'" value="동의페이지"><br>
+            <c:out value="${sessionScope.log}"></c:out>
+
+            <!-- tree /f 프로젝트명 ( 프로젝트 경로에서)-->
+            <script type="text/javascript" src="js/index.js"></script>
+
+        </section>
+
         <section class="banner">
             <div>
                 <ul>

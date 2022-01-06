@@ -39,7 +39,7 @@
         </section>
         <section>
         <%--admin일때만--%>
-            <a href="/eventWrite">글쓰기</a>
+            <a href="/eventWrite"><span class="button">글쓰기</span></a>
         </section>
     </main>
     <c:import url="../footer.jsp"/>

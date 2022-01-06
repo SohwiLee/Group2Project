@@ -33,36 +33,47 @@ function search() {
             lists.push(e);
         });
 
+
         // 데이터 pos들
         for (let i = 0; i < lists.length; i++) {
-            if (posSel.value == lists[i].pos.split(" ")[0]) {
+            if (posSel.value === lists[i].pos.split(" ")[0] || posSel.value==="전체") {
                 posArr.push(true);
             } else {
                 posArr.push(false);
+
             }
         }
 
-
-        let isSame = false;
+        let addrCnt=0;
         // 데이터 key들
         for (let i = 0; i < lists.length; i++) {
+        let isSame = false;
             //console.log(lists[i].keywords.split("#"));
+            // addrCnt=0;
             for (let j = 0; j < lists[i].keywords.split("#").length; j++) {
                 for (let k = 0; k < keysChoose.length; k++) {
-                    // console.log(lists[i].keywords.split("#")[j]+"//"+keysChoose[k].value);
-                    if (lists[i].keywords.split("#")[j] == keysChoose[k].value) {
+                     // console.log(lists[i].keywords.split("#")[j]+"//"+keysChoose[k].value);
+                    if (lists[i].keywords.split("#")[j] === keysChoose[k].value) {
                         isSame = true;
                     }
                 }
             }
+            // console.log(isSame);
             if (isSame) {
                 keyArr.push(true);
             } else {
                 keyArr.push(false);
+                addrCnt++;
+            }
+        if(addrCnt===10){ // false 10개 : 아무것도 선택X 전체결과 보여주기
+            for(let d=0;d<keyArr.length;d++){
+                delete keyArr[d];
+                keyArr[d]=true;
             }
         }
-        // console.log(posArr);
-        // console.log(keyArr);
+        }
+        console.log(posArr);
+        console.log(keyArr);
 
         //const resultSec = document.querySelector("section.results");
         const resultSec = $("section.results");
@@ -76,10 +87,10 @@ function search() {
 
             if (posArr[i] && keyArr[i]) {
                 // i번째 리스트들을 뽑아준다~!
-                console.log(lists[i].placename);
-                console.log(lists[i].tel);
-                console.log(lists[i].pos);
-                console.log(lists[i].keywords);
+                // console.log(lists[i].placename);
+                // console.log(lists[i].tel);
+                // console.log(lists[i].pos);
+                // console.log(lists[i].keywords);
                 // console.log(lists[i].imglink);
                 // html article 전부 지우고 데이터 뿌려주기
                 const getName = lists[i].placename;

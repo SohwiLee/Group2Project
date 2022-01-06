@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrap {
+    display: grid;
+    grid-template-columns: 1fr 450px 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "aside1 main aside2"
+;
+}
+main {
+    grid-area: main;
+    background-color:beige
+}
+i {
+    /* content: '';
+    display: inline-block; */
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    width: 24px;
+    height: 24px;
+    margin-top: -12px;
+    background-image: url(https://static.nid.naver.com/images/ui/join/m_icon_pw_step.png);
+    background-repeat: no-repeat;
+    /* background-position: 0 0; */
+    background-size: 125px 75px;
+    cursor: pointer;
+}
+.inputId , .inputPw , .inputPwCheck , .inputFirstName,
+.inputPhoneNumber , .inputEmail , .inputAdress2 , .inputAdress3{
+    width: 420px;
+    border: none;
+}
+.divId , .divPw , .divPwCheck , .divFirstName ,
+.divEmail , .divAdress2 , .divAdress3{
+    border: solid 1px;
+    background-color: white;
+    cursor: pointer;
+    border-color: rgb(163, 163, 163);
+}
+.divPw , .divPwCheck {
+    position: relative;
+}
+.inputPw , .inputPwCheck {
+    position: relative;
+}
+.inputPhoneNumber1 , .inputPhoneNumber2 , .inputPhoneNumber3{
+    width: 116px;
+}
+.inputResidentFront , .inputResidentBack {
+    width: 194px;
+}
+h3 {
+    margin : 14px 0 5px 0;
+    font-size: 15px;
+}
+input {
+    border : solid 1px;
+    padding: 0px 10px 0px 10px;
+    margin-bottom: 1px;
+    height: 30px;
+    cursor: pointer;
+    outline: none;
+    border-color: rgb(182, 182, 182);
+}
+
+.buttonAdress {
+    height: 30px;
+    width: 150px;
+    margin-left: 10px;
+    border : none;
+    background-color: rgb(168, 161, 161);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+.buttonJoin , .buttonBack{
+    width: 450px;
+    height: 40px;
+    margin-bottom: 7px;
+    font-weight: 700;
+    background-color: rgb(168, 161, 161);
+    color: rgb(255, 255, 255);
+}
+
+span {
+    display: none;
+}

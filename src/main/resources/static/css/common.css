@@ -7,8 +7,6 @@
 .wrap{width:100%;height:100%;}
 a{display: block;}
 
-
-/*임시*/
 header,footer{height:100px;background:#98DDCA;}
 
 /*header*/
@@ -17,6 +15,8 @@ header h1{text-align:center;line-height:100px;}
 .users, nav{position:absolute; z-index: 5;}
 .users{left:10vw;top:calc(0% + 45px - 1em); display: flex;}
 .users a{padding:10px 18px;}
+
+/*navigator*/
 nav{width:0;height:0;right:3vw;top:calc(100px - 100px * 0.6 - 18%);  border-radius: 10px; background-color: #CDF0EA; overflow: hidden;}
 nav a{padding:20px 60px 20px 30px; text-align: center;width:140px;}
 
@@ -31,6 +31,10 @@ nav a{padding:20px 60px 20px 30px; text-align: center;width:140px;}
 }
 .none{width:0;height:0;animation:close 0.4s ease-in-out forwards;}
 .navShow{width:230px; height:310px; animation:open 0.4s ease-in-out forwards;}
+
+/*buttons*/
+.button, input[type=button]{font-size:1em; padding:15px 25px; border-radius:10px; border:none; background:#CDF0EA;}
+/*animation*/
 @keyframes close{
     from{width:230px; height:310px;}
     to{width:0;height:0;}

@@ -131,12 +131,7 @@
                     <label for="수도권">#수도권</label>
                 </form>
             </article>
-            <article class="residence">
-
-            </article>
-            <article>
-                <button onclick="search()">search</button>
-            </article>
+            <button onclick="search()" class="button">search</button>
 
         </section>
     </main>

@@ -24,7 +24,7 @@
     <nav class="">
         <button class="close navBtn" onclick="btnClose()">닫기</button>
         <ul><li><a href="/login">로그인</a></li></ul>
-        <ul><li><a href="/search">검색</a></li></ul>
+        <ul><li><a href="/searchKey">검색</a></li></ul>
         <ul><li><a href="/festival">축제정보</a></li></ul>
         <ul><li><a href="/events">이벤트</a></li></ul>
         <ul><li><a href="/notices">공지사항</a></li></ul>

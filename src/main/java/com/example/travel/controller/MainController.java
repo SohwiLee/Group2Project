@@ -129,4 +129,42 @@ public class MainController {
         return "festival";
     }
 
+
+    // users Information
+    @GetMapping("/join")
+    public String join(){
+        return "/user/join";
+    }
+
+    @GetMapping("/login")
+    public String login(){return "/user/login";}
+
+    @GetMapping("/main")
+    public String main(){return "main";}
+
+    @GetMapping("/delete")
+    public String delete() {
+        return "/user/delete";
+    }
+
+    @GetMapping("/update")
+    public String update() {
+        return "/user/update";
+    }
+
+    @GetMapping("/logout")
+    public String logout() {
+        return "/user/logout";
+    }
+
+    @GetMapping("/adressSearch")
+    public String adressSearch() {
+        return "/user/adressSearch";
+    }
+
+    @GetMapping("/joinAgree")
+    public String joinAgree() {
+        return "/user/joinAgree";
+    }
+
 }
