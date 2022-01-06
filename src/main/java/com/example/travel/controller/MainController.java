@@ -123,7 +123,7 @@ public class MainController {
     }
 
 
-    // festivalInfo page
+    // festivalInfo
     @GetMapping("/festival")
     public String festival(){
         return "festival";
