@@ -73,6 +73,11 @@ public class MainController {
         return eController.updateEvent(request, code);
     }
 
+    @GetMapping("/Event/cntlike/{code}")
+    public String elikeCount(HttpServletRequest request, @PathVariable int code){
+        return eController.updateLikeCnt(request,code);
+    }
+
     // - delete page
     @GetMapping("/delEvent/{code}")
     public void deleteEvent(@PathVariable int code, HttpServletResponse response) throws IOException {
@@ -116,7 +121,7 @@ public class MainController {
     }
 
     @GetMapping("/Notice/cntlike/{code}")
-    public String likeCount(HttpServletRequest request, @PathVariable int code){
+    public String nlikeCount(HttpServletRequest request, @PathVariable int code){
         return nController.updateLikeCnt(request,code);
     }
 

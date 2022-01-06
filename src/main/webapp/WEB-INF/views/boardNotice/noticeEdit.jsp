@@ -20,34 +20,33 @@
     <title>NoticeEdit</title>
 </head>
 <body>
-<div class="wrap board">
+<div class="wrap board write">
     <c:import url="../header.jsp"/>
     <main>
         <form action="/editNotice/${code}">
         <section>
             <h2>공지사항 - 수정</h2>
-            <table>
-                <tbody>
-                <tr>
-                    <td>
-                       <h3><input type="text" name="title" value="${title}"></h3>
-                    </td>
-                </tr>
-                <tr> <td>${regdate}</td></tr>
-                <tr> <td><textarea name="content" id="" cols="30" rows="10">${content}</textarea> </td></tr>
-                <tr> <td>${likes}</td></tr>
-                <tr> <td>${viewcount}</td></tr>
-                </tbody>
-            </table>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>제목</td>
+                        <td><input type="text" name="title" value="${title}"></td>
+                    </tr>
+
+                    <tr> <td>내용</td><td><textarea name="content" id="content" cols="35" rows="30">${content}</textarea> </td></tr>
+                    </tbody>
+                </table>
         </section>
-        <section>
-            <input type="submit" value="수정완료">
-            <a href="/notices">취소</a>
+        <section class="btnPart">
+            <a href="/notices"class="button">취소</a>
+            <input type="submit" value="수정완료"class="button">
         </section>
         </form>
+        <section class="btnPart del">
         <form action="/delNotice/${code}">
-            <input type="submit" value="삭제">
+            <input type="submit" value="삭제" class="button">
         </form>
+        </section>
     </main>
     <c:import url="../footer.jsp"/>
 </div>

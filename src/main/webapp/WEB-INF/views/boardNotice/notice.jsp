@@ -38,9 +38,9 @@
             </article>
             </c:forEach>
         </section>
-        <section>
+        <section class="btnPart">
         <%--admin일때만--%>
-            <a href="/noticeWrite">글쓰기</a>
+            <a href="/noticeWrite" class="button toWrite">글쓰기</a>
         </section>
     </main>
     <c:import url="../footer.jsp"/>

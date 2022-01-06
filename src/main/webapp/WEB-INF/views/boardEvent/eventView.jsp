@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/board.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/js/board.js"></script>
     <title>NoticeView</title>
 </head>
 <body>
@@ -28,21 +29,23 @@
             <table>
                 <tbody>
                 <tr>
-                    <td>
-                       <h3> ${title}</h3>
+                    <td class="viewTitle">
+                        <h3> ${title}</h3>
+                        <p> <span class="likes"><span class="heart">♥</span>${likes} </span> <span class="viewCount"><img class="eye" src="https://www.freeiconspng.com/uploads/eyeball-icon-png-eye-icon-1.png"></img>${viewcount} </span></p>
                     </td>
                 </tr>
                 <tr> <td>${regdate}</td></tr>
-                <tr> <td>${content}</td></tr>
-                <tr> <td>${likes}</td></tr>
-                <tr> <td>${viewcount}</td></tr>
+                <tr> <td class="content">${content}</td></tr>
+                <tr><td> <a href="/Event/cntlike/${code}" class="putLike" onclick="addLike()">♡</a></td></tr>
                 </tbody>
             </table>
         </section>
-        <section>
+        <section class="btnPart">
             <%-- admin일 때만 보이기--%>
-                <a href="/event/${code}/edit">수정</a>
-                <a href="/events">목록으로</a>
+            <a class="button edit" href="/event/${code}/edit">수정</a>
+            <a class="button next" href="/event/${code+1}">다음</a>
+            <a class="button prev" href="/event/${code-1}">이전</a>
+            <a class="button toList" href="/events">목록으로</a>
         </section>
     </main>
     <c:import url="../footer.jsp"/>

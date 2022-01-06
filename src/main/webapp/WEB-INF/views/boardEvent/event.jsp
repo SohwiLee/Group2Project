@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/board.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/js/board.js"></script>
     <title>Event</title>
 </head>
 <body>
@@ -37,9 +38,9 @@
             </article>
             </c:forEach>
         </section>
-        <section>
+        <section class="btnPart">
         <%--admin일때만--%>
-            <a href="/eventWrite"><span class="button">글쓰기</span></a>
+            <a href="/eventWrite" class="button toWrite">글쓰기</a>
         </section>
     </main>
     <c:import url="../footer.jsp"/>

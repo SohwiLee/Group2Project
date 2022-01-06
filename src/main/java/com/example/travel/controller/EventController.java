@@ -2,6 +2,8 @@ package com.example.travel.controller;
 
 import com.example.travel.domain.event.Event;
 import com.example.travel.domain.event.EventRequestDto;
+import com.example.travel.domain.notice.Notice;
+import com.example.travel.domain.notice.NoticeRequestDto;
 import com.example.travel.domain.service.EventService;
 import lombok.RequiredArgsConstructor;
 import org.jetbrains.annotations.NotNull;
@@ -29,7 +31,8 @@ public class EventController {
         request.setAttribute("title",e.getTitle());
         request.setAttribute("content",e.getContent());
         request.setAttribute("regdate",e.getRegdate());
-        request.setAttribute("viewcount",e.getViewcount());
+        request.setAttribute("viewcount",e.getViewcount()+1);
+        service.updateView(code,new EventRequestDto(e.getViewcount()+1));
         request.setAttribute("likes",e.getLikes());
         return "boardEvent/eventView";
     }
@@ -63,6 +66,17 @@ public class EventController {
         service.updateEvent(code,dto);
         return getEvent(request, code);
     }
+
+    // update like
+    @PutMapping("v1/event/likeup/{code}")
+    public String updateLikeCnt(HttpServletRequest request,@PathVariable int code){
+        Event event = service.getEvent(code);
+        request.setAttribute("likes",event.getLikes()+1);
+        request.setAttribute("viewcount", event.getViewcount());
+        service.updateLike(code,new EventRequestDto(event.getViewcount()-1, event.getLikes()+1));
+        return getEvent(request,code);
+    }
+
 
     //delete
     @DeleteMapping("v1/events/{code}")
