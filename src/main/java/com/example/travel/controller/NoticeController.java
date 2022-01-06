@@ -53,6 +53,13 @@ public class NoticeController {
         return "boardNotice/notice";
     }
 
+    @GetMapping("v1/index/notices")
+    public String getNoticesIndex(HttpServletRequest request){
+        List<Notice> notices = service.getNotices();
+        request.setAttribute("noticeList",notices);
+        return "index";
+    }
+
 
     //update
     @PutMapping("v1/notices/{code}")

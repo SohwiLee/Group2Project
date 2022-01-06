@@ -16,3 +16,8 @@ function btnClose(){
        $("nav").addClass("none");
     });
 }
+
+// onload
+function loadIndex(){
+    window.location.href="/index/notices";
+}

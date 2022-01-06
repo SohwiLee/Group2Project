@@ -31,19 +31,16 @@
                 <tbody>
                 <tr>
                     <td>제목</td>
-                    <td>
-                        <h3><input type="text" name="title" class="title">
-                        </h3>
-                    </td>
+                    <td><input type="text" name="title" class="title"></td>
                 </tr>
 
-                <tr> <td>내용</td><td><textarea name="content" id="content" cols="30" rows="10"></textarea></td></tr>
+                <tr> <td>내용</td><td><textarea name="content" id="content" cols="35" rows="30"></textarea></td></tr>
                 </tbody>
             </table>
         </section>
-        <section>
-        <input type="submit" value="작성">
-        <a href="/notices">취소</a>
+        <section class="btnPart">
+        <a href="/notices" class="button">취소</a>
+        <input type="submit" value="작성" class="button">
         </section>
     </main>
     </form>

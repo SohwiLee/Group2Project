@@ -28,3 +28,12 @@ table td.content{min-height:200px; padding:20px 10px; display: block; border-top
     color:red;
 }
 
+/* 글쓰기, 수정 페이지 */
+.wrap.write tr:first-child td{border-bottom:1px solid dimgray; }
+.wrap.write td:first-child{text-align: center;}
+.wrap.write td:last-child{padding:0;}
+.wrap.write input[type=text], .wrap.write textarea{width:100%;}
+.wrap.write input[type=text]{height:38px;}
+.wrap.write .btnPart a{float:left;}
+.wrap.write .btnPart input{float:right;}
+.wrap.write .btnPart.del{padding-top:5px;}

@@ -45,8 +45,22 @@ public class EventService {
         event.update(dto);
         return event;
     }
+    @Transactional
+    public Event updateView(int code, EventRequestDto dto){
+        Event event = getEvent(code);
+        event.updateViewCnt(dto);
+        return event;
+    }
+
+    @Transactional
+    public Event updateLike(int code, EventRequestDto dto){
+        Event event = getEvent(code);
+        event.updateLikesCnt(dto);
+        return event;
+    }
 
     //delete
+    @Transactional
     public int deleteEvent(int code){
         Event event = getEvent(code);
         repo.deleteById(event.getCode());

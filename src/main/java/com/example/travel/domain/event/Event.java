@@ -1,5 +1,6 @@
 package com.example.travel.domain.event;
 
+import com.example.travel.domain.notice.NoticeRequestDto;
 import com.sun.istack.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -37,6 +38,16 @@ public class Event {
         this.content = dto.getContent();
         this.viewcount = dto.getViewcount();
         this.likes = dto.getLikes();
+    }
+
+
+    public void updateViewCnt(EventRequestDto dto){
+        this.viewcount = dto.getViewcount();
+    }
+
+    public void updateLikesCnt(EventRequestDto dto){
+        this.likes = dto.getLikes();
+        this.viewcount = dto.getViewcount();
     }
 
     public void add(EventRequestDto dto) {

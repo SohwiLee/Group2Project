@@ -36,4 +36,12 @@ public class EventRequestDto {
         this.viewcount=0;
         this.likes=0;
     }
+
+    public EventRequestDto(int viewcount){
+        this.viewcount = viewcount;
+    }
+
+    public EventRequestDto(int viewcount, int likes){
+        this.viewcount=viewcount;this.likes=likes;
+    }
 }
