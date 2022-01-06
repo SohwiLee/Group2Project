@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrap {
+    display: grid;
+    grid-template-columns: 1fr 450px 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "aside1 main aside2"
+;
+}
+main {
+    grid-area: main;
+    background-color:beige
+}
+input {
+    border : solid 1px;
+    padding: 0px 10px 0px 10px;
+    margin-bottom: 1px;
+    height: 30px;
+    cursor: pointer;
+    outline: none;
+    border-color: rgb(182, 182, 182);
+    width: 428px;
+}
+h1 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+div {
+    margin-bottom: 30px;
+}
+h3 {
+    margin : 14px 0 5px 0;
+    font-size: 15px;
+}
+
+.buttonLogin , .buttonBack{
+    width: 450px;
+    height: 40px;
+    margin-bottom: 7px;
+    font-weight: 700;
+    background-color: rgb(168, 161, 161);
+    color: rgb(255, 255, 255);
+}

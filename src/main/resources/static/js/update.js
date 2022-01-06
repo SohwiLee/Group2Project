@@ -1,3 +1,36 @@
+$.ajax({
+    type : "get",
+    url : "updateData"
+}) .done (user => {
+    console.log(user);
+    const userPw = user.pw.valueOf();
+    const userPhoneNumber = user.phonenumber.valueOf();
+    const userEmail = user.email.valueOf();
+    const userAdress1 = user.adress1.valueOf();
+    const userAdress2 = user.adress2.valueOf();
+    const userAdress3 = user.adress3.valueOf();
+
+    const inputPw = document.querySelector(".inputPw").valueOf();
+    const inputPwCheck = document.querySelector(".inputPwCheck").valueOf();
+    const inputPhoneNumber = document.querySelector(".inputPhoneNumber").valueOf();
+    const inputEmail = document.querySelector(".inputEmail").valueOf();
+    const inputAdress1 = document.querySelector(".inputAdress1").valueOf();
+    const inputAdress2 = document.querySelector(".inputAdress2").valueOf();
+    const inputAdress3 = document.querySelector(".inputAdress3").valueOf();
+
+    inputPw.value = userPw;
+    inputPwCheck.value = userPw;
+    inputPhoneNumber.value = userPhoneNumber;
+    inputEmail.value = userEmail;
+    inputAdress1.value = userAdress1;
+    inputAdress2.value = userAdress2;
+    inputAdress3.value = userAdress3;
+
+})
+
+
+
+
 function update(form) {
     const inputpassword = form.password.value;
     const inputpasswordCheck = form.passwordCheck.value;
@@ -8,10 +41,11 @@ function update(form) {
     const inputadress3 = form.adress3.value;
     //업데이트를 할건데
     // 업데이트에 필요한 요소 = 위에 콘스트 + 코드번호 .
-    $.ajax({
-        type : "get",
-        url : "getLogToCode"
-    }) .done (getCode=> {
+    if(inputpassword === inputpasswordCheck) {
+        $.ajax({
+            type : "get",
+            url : "getLogToCode"
+        }) .done (getCode=> {
             $.ajax({
                 type : "put",
                 url : `/v1/users/${getCode}`,
@@ -28,10 +62,15 @@ function update(form) {
 
             }) .done(respone =>{
                 alert("수정이 완료되었습니다.");
-                history.back(); // << 페이지 돌아가기
+                location.href="/";
             })
 
-    })
+        })
+    }else {
+        const pwError = document.querySelector(".spanPwError").valueOf();
+        pwError.style.display = "block";
+    }
+
 
 
 }

@@ -1,7 +1,6 @@
 function deleteCheck(form) {
     const inputId = form.id.value;
     const inputPw = form.pw.value;
-    const log = sessionStorage.getItem("log"); // Type String
     let userCode = null;
     let temp = false;
     let code = 100;
@@ -20,21 +19,6 @@ function deleteCheck(form) {
             })
         }) .done (getCode => {
             code = getCode;
-            // for(let i=0; i<users.length; i++) {
-            //     const usersId = users[i].id.valueOf();
-            //     const usersPw = users[i].pw.valueOf();
-            //     if(log === usersId && inputPw === usersPw) {
-            //         temp = true;
-            //         userCode = users[i].code.valueOf();
-            //         console.log("log : " , log )
-            //         console.log("log type : " , typeof log);
-            //         console.log("찾은 유저 코드 : " ,userCode);
-            //         console.log("userCode type : " , typeof userCode);
-            //         break;
-            //     }
-            // }
-            console.log("code : " , code);
-            console.log("code type : " , typeof code);
             if(code !== -1) {
                 $.ajax({
                     type : "delete" ,
@@ -49,4 +33,8 @@ function deleteCheck(form) {
             }
         })
     }
+}
+
+function backPage() {
+    history.back();
 }

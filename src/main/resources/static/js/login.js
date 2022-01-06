@@ -26,8 +26,7 @@ function checkId(form) {
             // }
             if(respone === true) {
                 alert(`${idData}님께서 로그인 하셨습니다.`);
-                // sessionStorage.setItem('log' , idData);
-                location.href='/';
+                location.href="/";
             }else {
                 alert("회원정보를 다시 확인해주세요.");
                 temp = false;
@@ -38,6 +37,9 @@ function checkId(form) {
     }
 }
 
+function backPage() {
+    history.back(); // << 페이지 돌아가기
+}
 
 
 

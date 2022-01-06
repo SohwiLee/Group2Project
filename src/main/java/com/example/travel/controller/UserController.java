@@ -23,7 +23,6 @@ public class UserController {
     // 1. Create
     @PostMapping("/v1/users")
     public User addUser(@RequestBody UserRequestDto userRequestDto , HttpServletRequest request) {
-        System.out.println("[UserController] 계정추가 성공 ! ");
         request.getSession().setAttribute("log" , userRequestDto.getId());
         return service.addUser(userRequestDto);
     }
@@ -38,7 +37,6 @@ public class UserController {
 //                () -> new IllegalArgumentException("존재하지 않는 사용자입니다.")
 //       );
 //        return user;
-        System.out.println("[UserController]getUser");
         return service.getUser(code);
     }
     // getUsers 메소드 완성 -> 디엠으로 제출(브라우저 또는 API플랫폼에서 get 요청 결과물 캡쳐)
@@ -47,7 +45,6 @@ public class UserController {
 //        List<User> users = null;
 //        users = repo.findAll();
 //        return users;
-        System.out.println("[UserController]getUsers");
         return service.getUsers();
     }
 
@@ -55,26 +52,20 @@ public class UserController {
     @PutMapping("/v1/users/{code}")
     public User updateUser(@PathVariable int code , @RequestBody UserRequestDto userRequestDto) {
         UserRequestDto dto = userRequestDto;
-        System.out.println("[UserController]updateUser");
-        System.out.println("[UserController] code : " + code);
-        System.out.println("[UserController] code : " + dto.getCode());
-        System.out.println("[UserController] id : " + dto.getId());
-        System.out.println("[UserController] pw : " + dto.getPw());
-        System.out.println("[UserController] firstname : " + dto.getFirstname());
-        System.out.println("[UserController] residentFront : " + dto.getResidentfront());
-        System.out.println("[UserController] residentBack : " + dto.getResidentback());
-        System.out.println("[UserController] phonenumber : " + dto.getPhonenumber());
-        System.out.println("[UserController] email : " + dto.getEmail());
-        System.out.println("[UserController] adress1 : " + dto.getAdress1());
-        System.out.println("[UserController] adress2 : " + dto.getAdress2());
-        System.out.println("[UserController] adress3 : " + dto.getAdress3());
         return service.updateUser(code , userRequestDto);
+    }
+
+    @GetMapping("/updateData")
+    public User updateData(HttpServletRequest request) {
+        User user = null;
+        int code = getLogToCode(request);
+        user = getUser(code);
+        return user;
     }
 
     // 4. Delete
     @DeleteMapping("/v1/users/{code}")
     public int deleteUser(@PathVariable int code , HttpServletRequest request) {
-        System.out.println("[UserController]deleteUser");
         request.getSession().removeAttribute("log");
         return service.deleteUser(code);
     }
@@ -90,8 +81,8 @@ public class UserController {
         boolean check = service.login(dto);
         if(check) {
             request.getSession().setAttribute("log" , dto.getId());
+            request.getSession().setAttribute("page", "login");
             String log = dto.getId();
-            System.out.println("[UserController] log : " + log);
             return true;
         }
         return false;
@@ -100,7 +91,6 @@ public class UserController {
     @GetMapping("/logoutController")
     public boolean logout(HttpServletRequest request) {
         request.getSession().removeAttribute("log");
-        System.out.println("[UserController] logout check");
         return true;
     }
 
@@ -109,7 +99,6 @@ public class UserController {
     public int getCode(@RequestBody UserRequestDto dto , HttpServletRequest request) {
         int code = service.getCode(dto , request);
             String log = request.getSession().getAttribute("log")+"";
-            System.out.println("[UserController] log : " + log);
             if(log.equals(dto.getId())) {
                 return code;
             }
@@ -128,6 +117,8 @@ public class UserController {
         }
         return code;
     }
+
+
 
 
 }

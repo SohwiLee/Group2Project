@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,9 +13,13 @@
     <title>Document</title>
 </head>
 <body>
+<c:import url="../header.jsp"/>
+
 <form>
+
     <div class="wrap">
         <main>
+            <h1>회원가입</h1>
             <h3>아이디</h3>
             <div class="divId">
                 <input type="text" name="id" class="inputId">
@@ -68,14 +73,14 @@
             </div>
             <span class="spanAllCheckError">전부 필수정보 입니다.</span><br>
             <input type="button" onclick="check(form)" value="회원가입하기" class="buttonJoin"><br>
-            <input type="button" onclick="back()" value="뒤로가기" class="buttonBack">
+            <input type="button" onclick="backPage()" value="뒤로가기" class="buttonBack">
         </main>
         <aside1></aside1>
         <aside2></aside2>
     </div>
 </form>
 
-
+<c:import url="../footer.jsp"/>
 <script type="text/javascript" src="js/join.js"></script>
 </body>
 </html>

@@ -59,20 +59,6 @@ public class UserService {
 //                () -> new IllegalArgumentException("존재하지 않는 사용자입니다.")
 //        );
         UserRequestDto dto = userRequestDto;
-        System.out.println("--------[UserService]------------------");
-        System.out.println("[UserController]updateUser");
-        System.out.println("[UserController] code : " + code);
-        System.out.println("[UserController] code : " + dto.getCode());
-        System.out.println("[UserController] id : " + dto.getId());
-        System.out.println("[UserController] pw : " + dto.getPw());
-        System.out.println("[UserController] firstname : " + dto.getFirstname());
-        System.out.println("[UserController] residentFront : " + dto.getResidentfront());
-        System.out.println("[UserController] residentBack : " + dto.getResidentback());
-        System.out.println("[UserController] phonenumber : " + dto.getPhonenumber());
-        System.out.println("[UserController] email : " + dto.getEmail());
-        System.out.println("[UserController] adress1 : " + dto.getAdress1());
-        System.out.println("[UserController] adress2 : " + dto.getAdress2());
-        System.out.println("[UserController] adress3 : " + dto.getAdress3());
         User user = getUser(code);
         user.update(userRequestDto);
         return user;

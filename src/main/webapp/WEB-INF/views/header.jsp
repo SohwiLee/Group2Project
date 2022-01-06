@@ -9,6 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link rel="stylesheet" href="/css/common.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="/js/common.js"></script>
     <!-- tree /f 프로젝트명 ( 프로젝트 경로에서)-->
@@ -25,7 +26,7 @@
             <c:choose>
                 <c:when test="${empty sessionScope.log}">
                     <input type="button" onclick="submit()" value="로그인" id="login"><br>
-                    <c:url var="path" value="join"/>
+                    <c:url var="path" value="joinAgree"/>
                     <input type="button" onclick="location.href='${path}'" value="회원가입" id="join"><br>
 
                 </c:when>

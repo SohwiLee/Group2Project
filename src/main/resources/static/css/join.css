@@ -73,7 +73,6 @@ input {
     margin-left: 10px;
     border : none;
     background-color: rgb(168, 161, 161);
-    color: rgb(255, 255, 255);
     font-weight: 700;
 }
 .buttonJoin , .buttonBack{
@@ -82,11 +81,15 @@ input {
     margin-bottom: 7px;
     font-weight: 700;
     background-color: rgb(168, 161, 161);
-    color: rgb(255, 255, 255);
 }
 
 span {
     display: none;
     font-size: 13px;
     color: red;
+}
+h1 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
 }

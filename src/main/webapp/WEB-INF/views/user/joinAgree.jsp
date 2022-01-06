@@ -7,172 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <%@ page contentType="text/html;charset=UTF-8" language="java" %>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    <style>
-        body {
-            margin: 0px;
-        }
-        .wrap {
-            height: 100vh;
-            display: grid;
-            grid-template-columns: 1fr 800px 1fr;
-            grid-template-rows: 150px auto 50px;
-            grid-template-areas:
-                "header header header"
-                "aside1 main aside2"
-                "aside1 footer aside2"
-        ;
-        }
-
-        .logo {
-            display: block;
-            width: 240px;
-            height: 44px;
-            margin: 50px auto 100px;
-            background-image: url(https://static.nid.naver.com/images/ui/join/m_naver_logo_20191126.png);
-            background-size: 240px auto;
-            font-size: 0;
-        }
-
-
-        header {
-            grid-area: header;
-            background-color: rgb(231, 231, 231);
-        }
-
-        main {
-            grid-area: main;
-            background-color: rgb(231, 231, 231);
-        }
-
-        footer {
-            grid-area: footer;
-            background-color: rgb(231, 231, 231);
-        }
-
-        .aside1 {
-            grid-area: aside1;
-            background-color: rgb(231, 231, 231);
-        }
-
-        .aside2 {
-            grid-area: aside2;
-            background-color: rgb(231, 231, 231);
-
-        }
-
-        .checkAll , .checkCompulsory1,.checkCompulsory2 , .checkOption1,.checkOption2{
-            display: none;
-        }
-
-        .label1 , .label2 , .label3 , .label4 , .label5 {
-            padding-left: 30px;
-            background-repeat: no-repeat;
-            background: #f5f6f7 url(https://static.nid.naver.com/images/ui/myinfo/pc_check_off_24.png) no-repeat 0 0;
-            background-size: 20px 20px;
-            cursor: pointer;
-            background-color: rgb(231, 231, 231);
-
-        }
-        .checkAll:checked+ .label1 {
-            background: #f5f6f7 url(https://static.nid.naver.com/images/ui/myinfo/pc_check_on_l_24.png) no-repeat 0 0;
-            background-color: rgb(231, 231, 231);
-            background-size: 20px 20px;
-        }
-
-        .checkCompulsory1:checked+ .label2 {
-            background: #f5f6f7 url(https://static.nid.naver.com/images/ui/myinfo/pc_check_on_l_24.png) no-repeat 0 0;
-            background-color: rgb(231, 231, 231);
-            background-size: 20px 20px;
-        }
-        .checkCompulsory2:checked+ .label3 {
-            background: #f5f6f7 url(https://static.nid.naver.com/images/ui/myinfo/pc_check_on_l_24.png) no-repeat 0 0;
-            background-color: rgb(231, 231, 231);
-            background-size: 20px 20px;
-        }
-        .checkOption1:checked+ .label4 {
-            background: #f5f6f7 url(https://static.nid.naver.com/images/ui/myinfo/pc_check_on_l_24.png) no-repeat 0 0;
-            background-color: rgb(231, 231, 231);
-            background-size: 20px 20px;
-        }
-        .checkOption2:checked+ .label5 {
-            background: #f5f6f7 url(https://static.nid.naver.com/images/ui/myinfo/pc_check_on_l_24.png) no-repeat 0 0;
-            background-color: rgb(231, 231, 231);
-            background-size: 20px 20px;
-        }
-
-        .check_all_text {
-            font-size: 15px;
-            font-weight: 900;
-            text-decoration: underline;
-        }
-
-        .check_text {
-            font-size: 14px;
-            font-weight: 700;
-        }
-        #compulsory {
-            font-size: 13px;
-            font-weight: 300;
-            color: rgb(53, 175, 106);
-        }
-        #option {
-            font-size: 13px;
-            font-weight: 300;
-            color: rgb(128, 128, 128);
-
-        }
-
-        .div_checkAll {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-        .div_check1 , .div_check2 , .div_check3 , .div_check4{
-            height: 20px;
-            margin-bottom: 10px;
-        }
-        .div_box1 , .div_box2 , .div_box3{
-            overflow: auto;
-            height: 80px;
-            background-color: white;
-            border: solid 1px;
-            border-color: rgb(150, 150, 150);
-            margin-bottom: 25px;
-        }
-        .error {
-            display : none;
-            font-size: 11px;
-            color: red;
-        }
-        a{
-            color: yellowgreen;
-        }
-        h3 {
-            padding: 0 12px 0 12px;
-            font-size: 13px;
-            color: rgb(61, 61, 61);
-        }
-        p {
-            padding: 0 12px 0 12px;
-            font-size: 12px;
-        }
-
-    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/joinAgree.css">
     <title>Document</title>
 </head>
 <body>
-<form action="_2_join.html">
+<c:import url="../header.jsp"/>
+<form>
     <div class="wrap">
-        <header>
-            <a href="https://www.naver.com/" class="logo">naver</a>
-        </header>
         <main>
             <div class="div_checkAll">
                 <input type="checkbox" class="checkAll" id="check_all"><label for="check_all" class="label1"><span
                     class="check_all_text">TourGuide 이용약관, 개인정보 수집 및 이용, 위치정보 이용약관(선택), 프로모션 정보 수신(선택)에 모두
-                        동의합니다.</span></label>
+                            동의합니다.</span></label>
             </div>
             <div class="div_check1">
                 <input type="checkbox" class="checkCompulsory1" id="check_compulsory1" name="checkBox"><label for="check_compulsory1"
@@ -189,10 +36,10 @@
                 </div>
                 <div class="box1_2">
                     <h3 class="box_title">다양한 TourGuide 서비스를 즐겨보세요.</h3>
-                    <p>TourGuide는<a href="https://www.naver.com/">www.naver.com</a>을 비롯한 TourGuide 도메인의 웹사이트 및 응용프로그램(어플리케이션, 앱)을 통해
+                    <p>TourGuide는 도메인의 웹사이트 및 응용프로그램(어플리케이션, 앱)을 통해
                         정보 검색, 다른 이용자와의 커뮤니케이션, 콘텐츠 제공, 상품 쇼핑 등 여러분의 생활에 편리함을 더할 수 있는 다양한 서비스를 제공하고 있습니다.<br>여러분은 PC,
                         휴대폰 등 인터넷 이용이 가능한 각종 단말기를 통해 각양각색의 TourGuide 서비스를 자유롭게 이용하실 수 있으며, 개별 서비스들의 구체적인 내용은 각 서비스 상의 안내,
-                        공지사항,<a href="https://help.naver.com/support/home.help">TourGuide 웹고객센터(이하'고객센터')</a>도움말 등에서 쉽게 확인하실 수
+                        공지사항,도움말 등에서 쉽게 확인하실 수
                         있습니다.</p>
                     <p></p>
                 </div>
@@ -200,7 +47,7 @@
             <div class="div_check2">
                 <input type="checkbox" class="checkCompulsory2" id="check_compulsory2" name="checkBox"><label for="check_compulsory2"
                                                                                                               class="label3"><span class="check_text">개인정보 수집 및 이용 동의<span id="compulsory">(필수)</span></span></label>
-                <a href="https://nid.naver.com/user2/V2Join?m=kidGuide"><span>어린이용 안내</span></a>
+
             </div>
             <div class="div_box2">
                 <div class="box2_1">
@@ -244,28 +91,9 @@
         </main>
         <aside class="aside1"></aside>
         <aside class="aside2"></aside>
-        <footer></footer>
     </div>
 </form>
-<script>
-    function back() {
-        location.href = "https://www.naver.com/";
-    }
-    function checkBoxs(form) {
-        if(form.checkBox[0].checked === true &&form.checkBox[1].checked === true  ) {
-            form.submit();
-        }else {
-            const a = document.querySelector('.error');
-            a.style.display = "block";
-        }
-
-    }
-
-    $( document ).ready( function() {
-        $( '.checkAll' ).click( function() {
-            $( 'input' ).prop( 'checked', this.checked );
-        });
-    });
-</script>
+    <script type="text/javascript" src="js/joinAgree.js"></script>
+<c:import url="../footer.jsp"/>
 </body>
 </html>
