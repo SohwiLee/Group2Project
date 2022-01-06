@@ -1,17 +1,13 @@
 package com.example.travel.controller;
 
 import com.example.travel.domain.user.User;
-import com.example.travel.service.UserService;
+import com.example.travel.domain.service.UserService;
 import com.example.travel.domain.user.UserRequestDto;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.*;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.websocket.server.PathParam;
+
 import java.util.List;
 
 

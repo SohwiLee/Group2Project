@@ -64,7 +64,7 @@ public class NoticeController {
         return getNotice(request, code);
     }
 
-    @PutMapping("v1/notices/{code}")
+    @PutMapping("/notice/viewup/{code}")
     public String updateViewCnt(HttpServletRequest request, @PathVariable int code){
         Notice n = service.getNotice(code);
         int cnt = Integer.parseInt(request.getParameter("viewcount"))+1;
