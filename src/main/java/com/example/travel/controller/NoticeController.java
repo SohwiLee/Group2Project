@@ -32,7 +32,7 @@ public class NoticeController {
         request.setAttribute("regdate",notice.getRegdate());
         request.setAttribute("viewcount",notice.getViewcount());
         request.setAttribute("likes",notice.getLikes());
-        return "noticeView";
+        return "boardNotice/noticeView";
     }
     @GetMapping("v1/notice/{code}")
     public String getNoticeE(HttpServletRequest request, @PathVariable int code){
@@ -43,13 +43,13 @@ public class NoticeController {
         request.setAttribute("regdate",notice.getRegdate());
         request.setAttribute("viewcount",notice.getViewcount());
         request.setAttribute("likes",notice.getLikes());
-        return "noticeEdit";
+        return "boardNotice/noticeEdit";
     }
     @GetMapping("v1/notices")
     public String getNotices(HttpServletRequest request){
         List<Notice> notices = service.getNotices();
         request.setAttribute("noticeList",notices);
-        return "notice";
+        return "boardNotice/notice";
     }
 
 

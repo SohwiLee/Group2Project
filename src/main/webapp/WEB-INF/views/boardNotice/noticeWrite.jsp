@@ -18,15 +18,15 @@
     <link rel="stylesheet" href="/css/board.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <%--    <script src="/js/board.js"></script>--%>
-    <title>EventWrite</title>
+    <title>NoticeWrite</title>
 </head>
 <body>
 <div class="wrap write board">
-<c:import url="header.jsp"/>
-    <form action="/addEvent">
+<c:import url="../header.jsp"/>
+    <form action="/addNotice">
     <main>
         <section>
-            <h2>이벤트 - 작성</h2>
+            <h2>공지사항 - 작성</h2>
             <table>
                 <tbody>
                 <tr>
@@ -43,12 +43,12 @@
         </section>
         <section>
         <input type="submit" value="작성">
-        <a href="/events">취소</a>
+        <a href="/notices">취소</a>
         </section>
     </main>
     </form>
 
-<c:import url="footer.jsp"/>
+<c:import url="../footer.jsp"/>
 </div>
 </body>
 </html>

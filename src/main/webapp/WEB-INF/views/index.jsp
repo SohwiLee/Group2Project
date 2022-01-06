@@ -28,7 +28,7 @@
         </section>
         <section class="theme">
             <article>
-                <div class="title"><h2>테마여행</h2> <p><a href="/search">더 자세히 검색하기</a></p></div>
+                <div class="title"><h2>테마여행</h2> <p><a href="/searchKey">더 자세히 검색하기</a></p></div>
                 <div class="lists">
                     <ul>
                         <li><a href="">#가족과함께</a></li>

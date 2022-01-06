@@ -33,14 +33,14 @@ public class EventController {
         request.setAttribute("regdate",e.getRegdate());
         request.setAttribute("viewcount",e.getViewcount());
         request.setAttribute("likes",e.getLikes());
-        return "eventView";
+        return "boardEvent/eventView";
     }
 
     @GetMapping("v1/events")
     public String getEvents(HttpServletRequest request){
         List<Event> events = service.getEvents();
         request.setAttribute("lists", events);
-        return "event";
+        return "boardEvent/event";
     }
 
     @GetMapping("v1/event/{code}")
@@ -52,7 +52,7 @@ public class EventController {
         request.setAttribute("regdate",event.getRegdate());
         request.setAttribute("viewcount",event.getViewcount());
         request.setAttribute("likes",event.getLikes());
-        return "eventEdit";
+        return "boardEvent/eventEdit";
     }
 
     //update

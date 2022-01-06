@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: SH
   Date: 2022-01-04
-  Time: 오전 12:27
+  Time: 오전 12:26
   To change this template use File | Settings | File Templates.
 --%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -17,38 +17,39 @@
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/board.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<%--    <script src="/js/board.js"></script>--%>
-    <title>NoticeWrite</title>
+    <title>EventEdit</title>
 </head>
 <body>
-<div class="wrap write board">
-<c:import url="header.jsp"/>
-    <form action="/addNotice">
+<div class="wrap board">
+    <c:import url="../header.jsp"/>
     <main>
+        <form action="/editEvent/${code}">
         <section>
-            <h2>공지사항 - 작성</h2>
+            <h2>이벤트 - 수정</h2>
             <table>
                 <tbody>
                 <tr>
-                    <td>제목</td>
                     <td>
-                        <h3><input type="text" name="title" class="title">
-                        </h3>
+                       <h3><input type="text" name="title" value="${title}"></h3>
                     </td>
                 </tr>
-
-                <tr> <td>내용</td><td><textarea name="content" id="content" cols="30" rows="10"></textarea></td></tr>
+                <tr> <td>${regdate}</td></tr>
+                <tr> <td><textarea name="content" id="" cols="30" rows="10">${content}</textarea> </td></tr>
+                <tr> <td>${likes}</td></tr>
+                <tr> <td>${viewcount}</td></tr>
                 </tbody>
             </table>
         </section>
         <section>
-        <input type="submit" value="작성">
-        <a href="/notices">취소</a>
+            <input type="submit" value="수정완료">
+            <a href="/events">취소</a>
         </section>
+        </form>
+        <form action="/delEvent/${code}">
+            <input type="submit" value="삭제">
+        </form>
     </main>
-    </form>
-
-<c:import url="footer.jsp"/>
+    <c:import url="../footer.jsp"/>
 </div>
 </body>
 </html>

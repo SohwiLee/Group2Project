@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.net.http.HttpClient;
 import java.util.List;
 
 
@@ -34,6 +33,10 @@ public class MainController {
     public List<Place> search() {
         return pController.getPlaces();
     }
+    @GetMapping("/searchKey")
+    public String searchview(){
+        return "/searchKeywords/search";
+    }
 
     // event page
     // - show lists
@@ -50,7 +53,7 @@ public class MainController {
     // - show write page
     @GetMapping("/eventWrite")
     public String eventWrite() {
-        return "eventWrite";
+        return "boardEvent/eventWrite";
     }
     // - add in sql
     @GetMapping("/addEvent")
@@ -92,7 +95,7 @@ public class MainController {
     // - show write page
     @GetMapping("/noticeWrite")
     public String noticeWrite() {
-        return "noticeWrite";
+        return "boardNotice/noticeWrite";
     }
     // - add in sql
     @GetMapping("/addNotice")

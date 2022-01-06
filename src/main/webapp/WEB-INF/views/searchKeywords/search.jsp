@@ -23,7 +23,7 @@
 <body>
 
 <div class="wrap search">
-    <c:import url="header.jsp"/>
+    <c:import url="../header.jsp"/>
 
     <main>
         <section class="results">
@@ -140,7 +140,7 @@
 
         </section>
     </main>
-    <c:import url="footer.jsp"/>
+    <c:import url="../footer.jsp"/>
 </div>
 
 </body>
