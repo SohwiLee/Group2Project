@@ -22,7 +22,7 @@ footer div:first-child{padding:20px 30px 0;}
 footer .team{display: flex;}
 footer .team div{width:50%; padding:20px 30px 40px;}
 footer .team h4{margin-bottom:8px;}
-footer .team span{font-size:0.9em;font-weight:400;}
+footer .team span{font-size:0.8em;font-weight:400;}
 footer .team p{margin-bottom:4px;}
 
 /*navigator*/

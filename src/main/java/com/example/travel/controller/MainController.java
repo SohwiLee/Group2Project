@@ -24,13 +24,8 @@ public class MainController {
 
     // index page
     @GetMapping("/")
-    public String index() {
-        return "index";
-    }
+    public String index(HttpServletRequest request) {
 
-    // index noticeLoad
-    @GetMapping("/index/notices")
-    public String indexNotice(HttpServletRequest request) {
         return nController.getNoticesIndex(request);
     }
 
