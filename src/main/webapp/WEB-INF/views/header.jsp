@@ -24,7 +24,7 @@
             <c:out value="${sessionScope.log}"/>
             <c:choose>
                 <c:when test="${empty sessionScope.log}">
-                    <input type="button" onclick="submit()" value="로그인하기" id="login"><br>
+                    <input type="button" onclick="submit()" value="로그인" id="login"><br>
                     <c:url var="path" value="join"/>
                     <input type="button" onclick="location.href='${path}'" value="회원가입" id="join"><br>
 
@@ -52,7 +52,8 @@
         <ul><li><a href="/notices">공지사항</a></li></ul>
         <ul><li>
             <c:url var="joinAgree" value="joinAgree"/>
-            <input type="button" id="agree" onclick="location.href='${joinAgree}'" value="동의페이지"><br>
+<%--            <input type="button" id="agree" onclick="location.href='${joinAgree}'" value="동의페이지">--%>
+            <a id="agree" href='${joinAgree}'>동의페이지</a>
             <c:out value="${sessionScope.log}"></c:out>
 
         </li></ul>

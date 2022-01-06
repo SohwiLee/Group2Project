@@ -30,7 +30,8 @@ public class NoticeController {
         request.setAttribute("title",notice.getTitle());
         request.setAttribute("content",notice.getContent());
         request.setAttribute("regdate",notice.getRegdate());
-        request.setAttribute("viewcount",notice.getViewcount());
+        request.setAttribute("viewcount",notice.getViewcount()+1);
+        service.updateView(code,new NoticeRequestDto(notice.getViewcount()+1));
         request.setAttribute("likes",notice.getLikes());
         return "boardNotice/noticeView";
     }
@@ -64,12 +65,13 @@ public class NoticeController {
         return getNotice(request, code);
     }
 
-    @PutMapping("/notice/viewup/{code}")
-    public String updateViewCnt(HttpServletRequest request, @PathVariable int code){
-        Notice n = service.getNotice(code);
-        int cnt = Integer.parseInt(request.getParameter("viewcount"))+1;
-        NoticeRequestDto dto = new NoticeRequestDto(n.getCode(), n.getTitle(),n.getContent(),n.getRegdate(),cnt, n.getLikes());
-        service.updateView(code,dto);
+    // update like
+    @PutMapping("v1/notice/likeup/{code}")
+    public String updateLikeCnt(HttpServletRequest request,@PathVariable int code){
+        Notice notice = service.getNotice(code);
+        request.setAttribute("likes",notice.getLikes()+1);
+        request.setAttribute("viewcount", notice.getViewcount());
+        service.updateLike(code,new NoticeRequestDto(notice.getViewcount()-1, notice.getLikes()+1));
         return getNotice(request,code);
     }
 

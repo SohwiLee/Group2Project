@@ -5,9 +5,25 @@ article{border-top:0.5px solid #999; border-bottom:0.5px solid #999; padding:20p
 
 h3{font-size:1.5em;margin-bottom:8px;}
 .counts{display:flex; justify-content: space-between;font-size:1.2em;}
-.likes{}
 .heart{color:red;}
-.viewCount img{width:25px;vertical-align: bottom; margin-left:5px; margin-right:3px;}
+img.eye{width:25px;vertical-align: top; margin-left:5px; margin-right:3px;}
 
 table{width:100%;}
-table td.content{min-height:200px; padding:20px 10px; display: block; border-top:1px solid dimgray; border-bottom:1px solid dimgray; }
+table td.content{min-height:200px; padding:20px 10px; display: block; border-top:1px solid dimgray; }
+
+.viewTitle{display: flex;justify-content: space-between;}
+.btnPart{overflow: hidden; padding-top:20px;}
+.edit{float:left;}
+.prev,.next,.toList{float:right;margin-left:10px;}
+
+.putLike{
+    float: right;
+    padding: 5px 10px 8px;
+    font-size: 1.5em;
+    background: transparent;
+    border: none;
+}
+
+.putLike.clicked{
+    color:red;
+}

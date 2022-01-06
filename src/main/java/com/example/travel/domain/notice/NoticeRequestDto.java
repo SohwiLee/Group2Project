@@ -38,8 +38,13 @@ public class NoticeRequestDto {
         this.viewcount=0;
         this.likes=0;
     }
-//
-//    public NoticeRequestDto(int viewcount){
-//        this.viewcount = viewcount;
-//    }
+
+    // viewcount용
+    public NoticeRequestDto(int viewcount){
+        this.viewcount = viewcount;
+    }
+
+    public NoticeRequestDto(int viewcount, int likes){
+        this.viewcount=viewcount;this.likes=likes;
+    }
 }

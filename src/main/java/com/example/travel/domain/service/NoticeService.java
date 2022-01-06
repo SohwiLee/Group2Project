@@ -53,6 +53,13 @@ public class NoticeService {
         return notice;
     }
 
+    @Transactional
+    public Notice updateLike(int code, NoticeRequestDto dto){
+        Notice notice = getNotice(code);
+        notice.updateLikesCnt(dto);
+        return notice;
+    }
+
     //delete
     @Transactional
     public int deleteNotice(int code){

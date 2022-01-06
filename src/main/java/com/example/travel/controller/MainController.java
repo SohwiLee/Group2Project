@@ -115,6 +115,11 @@ public class MainController {
         return nController.updateNotice(request, code);
     }
 
+    @GetMapping("/Notice/cntlike/{code}")
+    public String likeCount(HttpServletRequest request, @PathVariable int code){
+        return nController.updateLikeCnt(request,code);
+    }
+
     // - delete page
     @GetMapping("/delNotice/{code}")
     public void deleteNotice(@PathVariable int code, HttpServletResponse response) throws IOException {

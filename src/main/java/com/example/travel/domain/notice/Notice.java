@@ -43,6 +43,11 @@ public class Notice {
         this.viewcount = dto.getViewcount();
     }
 
+    public void updateLikesCnt(NoticeRequestDto dto){
+        this.likes = dto.getLikes();
+        this.viewcount = dto.getViewcount();
+    }
+
     public void add(NoticeRequestDto dto) {
         this.title = dto.getTitle();
         this.content = dto.getContent();

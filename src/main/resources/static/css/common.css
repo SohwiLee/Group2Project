@@ -20,19 +20,22 @@ header h1{text-align:center;line-height:100px;}
 
 /*navigator*/
 nav{width:0;height:0;right:3vw;top:calc(100px - 100px * 0.6 - 18%);  border-radius: 10px; background-color: #CDF0EA; overflow: hidden;}
-nav ul li input#agree{width:100%;}
-nav ul li input#agree, nav ul li a{padding:20px 60px 20px 30px; text-align: center;width:140px;}
+nav ul li a{padding:20px 60px 20px 30px; text-align: center;width:140px;}
+nav ul li a:hover{background:#98DDCA; font-weight: bold;}
 .open{ right:3vw;top:calc(100px - 100px * 0.6 - 18%); }
 .close{right:0;top:0; background:transparent;}
 .navBtn{
     width:calc(100px * 0.6);height:calc(100px*0.6);
     position:absolute;   z-index: 5;
     border:1px solid transparent;
-    border-radius: 10px;
+    border-radius: 50%;
     cursor:pointer;
 }
+.navBtn:hover{font-weight:bold;background-color:dimgray;color:white;}
+.navBtn.close:hover{background-color:gray}
 .none{width:0;height:0;animation:close 0.4s ease-in-out forwards;}
 .navShow{width:230px; height:370px; animation:open 0.4s ease-in-out forwards;}
+
 /* tables */
 table{border-top:2px solid dimgray; border-bottom:2px solid dimgray;}
 table td{padding:10px;}
