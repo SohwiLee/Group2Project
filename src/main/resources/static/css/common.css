@@ -52,3 +52,31 @@ table td{padding:10px;}
     from{width:0;height:0;}
     to{width:230px; height:370px;}
 }
+
+
+
+.sectionComment {
+    background-color: rgb(245, 255, 253);
+    width: 980px;
+    height: 130px;
+    display :flex;
+    justify-content :center;
+    align-items: center;
+    border-radius : 10px;
+}
+#idComment {
+    resize: none;
+    border: solid 1px;
+    font-size: 15px;
+    /* testarea의 크기를 변환을 없애줌 .  */
+    padding: 5px;
+    width: 700px;
+    height: 85px;
+    border-radius : 10px;
+}
+.buttonWrite {
+    width: 85px;
+    height: 95px;
+    margin-left: 10px;
+    border-radius : 5px;
+}

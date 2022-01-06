@@ -3,3 +3,7 @@ function addLike(){
 
     // console.log(document.getElementsByClassName("like"))
 }
+
+function test() {
+    alert("tttt");
+}
