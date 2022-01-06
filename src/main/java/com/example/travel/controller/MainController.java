@@ -1,5 +1,6 @@
 package com.example.travel.controller;
 
+import com.example.travel.domain.event.EventRequestDto;
 import com.example.travel.domain.notice.NoticeRequestDto;
 import com.example.travel.domain.place.Place;
 import lombok.RequiredArgsConstructor;
@@ -37,13 +38,45 @@ public class MainController {
     // event page
     // - show lists
     @GetMapping("/events")
-    public String event(HttpServletRequest request){return eController.getEvents(request);}
+    public String event(HttpServletRequest request) {
+        return eController.getEvents(request);
+    }
 
     // - show one page
     @GetMapping("/event/{code}")
     public String eventDetail(HttpServletRequest request, @PathVariable int code){
         return eController.getEvent(request,code);
     }
+    // - show write page
+    @GetMapping("/eventWrite")
+    public String eventWrite() {
+        return "eventWrite";
+    }
+    // - add in sql
+    @GetMapping("/addEvent")
+    public String addEvent(HttpServletRequest request,String title, String content){
+        title=request.getParameter("title");
+        content=request.getParameter("content");
+        return eController.addEvent(request, new EventRequestDto(title,content));
+    }
+    // - show edit page
+    @GetMapping("/event/{code}/edit")
+    public String eventEdit(HttpServletRequest request, @PathVariable int code){
+        return eController.getEventE(request, code);
+    }
+    // - edit in sql
+    @GetMapping("/editEvent/{code}")
+    public String editEvent(HttpServletRequest request, @PathVariable int code){
+        return eController.updateEvent(request, code);
+    }
+
+    // - delete page
+    @GetMapping("/delEvent/{code}")
+    public void deleteEvent(@PathVariable int code, HttpServletResponse response) throws IOException {
+        eController.deleteEvent(code);
+        response.sendRedirect("/events");
+    }
+
 
     // notice page
     // - show lists

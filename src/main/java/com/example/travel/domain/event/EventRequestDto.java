@@ -20,7 +20,7 @@ public class EventRequestDto {
         this.likes=likes;
     }
 
-    private EventRequestDto(int code, String title, String content, Timestamp regdate,int viewcount, int likes) {
+    public EventRequestDto(int code, String title, String content, Timestamp regdate, int viewcount, int likes) {
         this.code = code;
         this.title = title;
         this.content = content;

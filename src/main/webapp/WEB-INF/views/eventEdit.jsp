@@ -17,33 +17,37 @@
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/board.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <title>NoticeView</title>
+    <title>EventEdit</title>
 </head>
 <body>
 <div class="wrap board">
     <c:import url="header.jsp"/>
     <main>
+        <form action="/editEvent/${code}">
         <section>
-            <h2>이벤트</h2>
+            <h2>이벤트 - 수정</h2>
             <table>
                 <tbody>
                 <tr>
                     <td>
-                       <h3> ${title}</h3>
+                       <h3><input type="text" name="title" value="${title}"></h3>
                     </td>
                 </tr>
                 <tr> <td>${regdate}</td></tr>
-                <tr> <td>${content}</td></tr>
+                <tr> <td><textarea name="content" id="" cols="30" rows="10">${content}</textarea> </td></tr>
                 <tr> <td>${likes}</td></tr>
                 <tr> <td>${viewcount}</td></tr>
                 </tbody>
             </table>
         </section>
         <section>
-            <%-- admin일 때만 보이기--%>
-                <a href="/event/${code}/edit">수정</a>
-                <a href="/events">목록으로</a>
+            <input type="submit" value="수정완료">
+            <a href="/events">취소</a>
         </section>
+        </form>
+        <form action="/delEvent/${code}">
+            <input type="submit" value="삭제">
+        </form>
     </main>
     <c:import url="footer.jsp"/>
 </div>
