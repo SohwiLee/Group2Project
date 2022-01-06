@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/board.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/js/board.js"></script>
     <title>Notice</title>
 </head>
 <body>
@@ -27,7 +28,7 @@
          <h2>공지사항</h2>
             <c:forEach var="i" items="${noticeList}">
             <article>
-                <a href="notice/${i.code}" onclick="">
+                <a href="notice/${i.code}">
                 <h3><c:out value="${i.title}"/> </h3>
                 <div class="counts">
                    <p><c:out value="${i.regdate}"/></p>

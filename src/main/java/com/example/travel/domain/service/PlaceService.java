@@ -1,4 +1,4 @@
-package com.example.travel.service;
+package com.example.travel.domain.service;
 
 import com.example.travel.domain.place.Place;
 import com.example.travel.domain.place.PlaceRepository;

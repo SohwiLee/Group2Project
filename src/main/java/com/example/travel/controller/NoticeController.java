@@ -2,7 +2,7 @@ package com.example.travel.controller;
 
 import com.example.travel.domain.notice.Notice;
 import com.example.travel.domain.notice.NoticeRequestDto;
-import com.example.travel.service.NoticeService;
+import com.example.travel.domain.service.NoticeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -63,6 +63,16 @@ public class NoticeController {
         service.updateNotice(code,dto);
         return getNotice(request, code);
     }
+
+    @PutMapping("v1/notices/{code}")
+    public String updateViewCnt(HttpServletRequest request, @PathVariable int code){
+        Notice n = service.getNotice(code);
+        int cnt = Integer.parseInt(request.getParameter("viewcount"))+1;
+        NoticeRequestDto dto = new NoticeRequestDto(n.getCode(), n.getTitle(),n.getContent(),n.getRegdate(),cnt, n.getLikes());
+        service.updateView(code,dto);
+        return getNotice(request,code);
+    }
+
 
     //delete
     @DeleteMapping("v1/notices/{code}")

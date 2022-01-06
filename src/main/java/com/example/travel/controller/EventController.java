@@ -2,9 +2,7 @@ package com.example.travel.controller;
 
 import com.example.travel.domain.event.Event;
 import com.example.travel.domain.event.EventRequestDto;
-import com.example.travel.domain.notice.Notice;
-import com.example.travel.domain.notice.NoticeRequestDto;
-import com.example.travel.service.EventService;
+import com.example.travel.domain.service.EventService;
 import lombok.RequiredArgsConstructor;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.web.bind.annotation.*;

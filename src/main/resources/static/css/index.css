@@ -10,7 +10,7 @@ section .title{display: flex; align-items: center; justify-content: space-betwee
 
 .theme{border-bottom:1px solid #e3effd;}
 .theme article{width:980px;margin:0 auto;}
-.theme .lists ul{display: flex;align-items: center;flex-wrap:wrap;gap:15px; padding:2.5vw 5vw;}
+.theme .lists ul{display: flex;align-items: center;flex-wrap:wrap;gap:10px; padding:2.5vw 5vw;}
 .theme .lists li a{padding:10px 18px; border-radius: 20px;border:1px solid gray; color:gray;}
 .theme .lists li a:hover{border:1px solid black; font-weight: 600; color:black;}
 

@@ -21,3 +21,4 @@ input[type=radio]:checked + label, input[type=checkbox]:checked ~ label{color:wh
 
 .results article.none{display:none;}
 
+button{display: block;margin:0 auto 30px;}

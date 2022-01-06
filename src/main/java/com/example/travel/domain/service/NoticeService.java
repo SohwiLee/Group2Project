@@ -1,4 +1,4 @@
-package com.example.travel.service;
+package com.example.travel.domain.service;
 
 import com.example.travel.domain.notice.Notice;
 import com.example.travel.domain.notice.NoticeRepository;
@@ -46,7 +46,15 @@ public class NoticeService {
         return notice;
     }
 
+    @Transactional
+    public Notice updateView(int code, NoticeRequestDto dto){
+        Notice notice = getNotice(code);
+        notice.updateViewCnt(dto);
+        return notice;
+    }
+
     //delete
+    @Transactional
     public int deleteNotice(int code){
 //        Notice notice = getNotice(code);
 //        repo.deleteById(notice.getCode());

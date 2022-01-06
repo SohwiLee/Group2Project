@@ -33,9 +33,9 @@
                     </td>
                 </tr>
                 <tr> <td>${regdate}</td></tr>
-                <tr> <td>${content}</td></tr>
+                <tr> <td class="content">${content}</td></tr>
                 <tr> <td>${likes}</td></tr>
-                <tr> <td>${viewcount}</td></tr>
+                <tr> <td><input type="hidden" name="viewcount" value="${viewcount}">${viewcount}</td></tr>
                 </tbody>
             </table>
         </section>

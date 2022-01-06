@@ -16,40 +16,6 @@
 <div class="wrap index">
     <c:import url="header.jsp"/>
     <main>
-        <section>
-
-
-            <form method="get" action="login">
-                <input type="hidden" id="hidden">
-                <c:out value="${sessionScope.log}"/>
-                <c:choose>
-                    <c:when test="${empty sessionScope.log}">
-                        <input type="button" onclick="submit()" value="로그인하기" id="login"><br>
-                        <c:url var="path" value="join"/>
-                        <input type="button" onclick="location.href='${path}'" value="회원가입" id="join"><br>
-
-                    </c:when>
-                    <c:otherwise>
-                        <c:url var="logout" value="logout"/>
-                        <c:url var="delete" value="delete"/>
-                        <c:url var="update" value="update"/>
-                        <input type="button" onclick="location.href='${logout}'" value="로그아웃" id="logout"><br>
-                        <input type="button" onclick="location.href='${delete}'" value="회원탈퇴" id="delete"><br>
-                        <input type="button" onclick="location.href='${update}'" value="정보수정" id="update"><br>
-
-                    </c:otherwise>
-                </c:choose>
-            </form>
-            <h1>여기는 index 페이지3333</h1>
-            <c:url var="joinAgree" value="joinAgree"/>
-            <input type="button" onclick="location.href='${joinAgree}'" value="동의페이지"><br>
-            <c:out value="${sessionScope.log}"></c:out>
-
-            <!-- tree /f 프로젝트명 ( 프로젝트 경로에서)-->
-            <script type="text/javascript" src="js/index.js"></script>
-
-        </section>
-
         <section class="banner">
             <div>
                 <ul>
@@ -66,17 +32,17 @@
                 <div class="lists">
                     <ul>
                         <li><a href="">#가족과함께</a></li>
-                        <li><a href="">#연인과함께</a></li>
-                        <li><a href="">#당일치기</a></li>
-                        <li><a href="">#축제</a></li>
-                        <li><a href="">#역사여행</a></li>
-                        <li><a href="">#로맨틱야경</a></li>
-                        <li><a href="">#데이트코스</a></li>
+                        <li><a href="">#가족여행</a></li>
+                        <li><a href="">#관광지</a></li>
                         <li><a href="">#휴식</a></li>
-                        <li><a href="">#자연여행</a></li>
+                        <li><a href="">#연인과함께</a></li>
+                        <li><a href="">#데이트코스</a></li>
+                        <li><a href="">#로맨틱야경</a></li>
                         <li><a href="">#역사여행</a></li>
                         <li><a href="">#유네스코</a></li>
                         <li><a href="">#제주여행</a></li>
+                        <li><a href="">#수도권</a></li>
+                        <li><a href="">#이색체험</a></li>
                     </ul>
 
                 </div>

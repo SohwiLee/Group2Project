@@ -155,7 +155,7 @@ public class MainController {
     @GetMapping("/logout")
     public String logout() {
         return "/user/logout";
-    }
+    } 
 
     @GetMapping("/adressSearch")
     public String adressSearch() {
