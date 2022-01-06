@@ -19,4 +19,5 @@ section .title{display: flex; align-items: center; justify-content: space-betwee
 .infos article{width:50%;}
 .infos article .title{width:90%;}
 .infos article table{margin-top:2.5vw;width:95%;border-collapse: collapse;border-top:2px solid dimgray;border-bottom:2.5px solid dimgray;}
-.infos article table td{border-top:0.5px solid gray;border-bottom:0.5px solid gray; padding:5px;}
+.infos article table td{border-top:0.5px solid gray;border-bottom:0.5px solid gray; padding:10px; font-size:0.8em;}
+.infos article table td a{font-weight:500;}

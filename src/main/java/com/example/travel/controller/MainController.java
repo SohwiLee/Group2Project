@@ -28,6 +28,12 @@ public class MainController {
         return "index";
     }
 
+    // index noticeLoad
+    @GetMapping("/index/notices")
+    public String indexNotice(HttpServletRequest request) {
+        return nController.getNoticesIndex(request);
+    }
+
     // search page
     @GetMapping("/search")
     public List<Place> search() {

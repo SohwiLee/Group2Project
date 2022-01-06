@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/js/common.js"></script>
     <title>index</title>
 </head>
 <body>
@@ -28,7 +29,7 @@
         </section>
         <section class="theme">
             <article>
-                <div class="title"><h2>테마여행</h2> <p><a href="/searchKey">더 자세히 검색하기</a></p></div>
+                <div class="title"><h2>테마여행</h2> <p><a href="/searchKey">지역과 함께 검색</a></p></div>
                 <div class="lists">
                     <ul>
                         <li><a href="">#가족과함께</a></li>
@@ -51,12 +52,15 @@
         <section class="infos">
             <div>
             <article class="notice">
-                <div class="title"> <h3>공지사항</h3> <p><a href="/notices">+</a></p></div>
-
+                <div class="title"> <h3>공지사항</h3> <p><a href="/notices">더보기</a></p></div>
                 <table>
-<%--                    <c:forEach var="i" end="4" items="${noticeList}">--%>
-<%--                    <tr><td>${i.title}</td><td>${i.regdate}</td></tr>--%>
-<%--                    </c:forEach>--%>
+                    <c:forEach var="i" end="4" items="${noticeList}">
+                        <tr><td>
+                            <a href="notice/${i.code}">
+                                <h3><c:out value="${i.title}"/> </h3>
+                            </a>
+                        </td></tr>
+                    </c:forEach>
                 </table>
             </article>
             <article class="festival">
