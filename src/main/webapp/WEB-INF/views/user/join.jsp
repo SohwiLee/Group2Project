@@ -43,9 +43,9 @@
             </div>
             <h3>핸드폰번호</h3>
             <div class="divPhoneNumber">
-                <input type="text" name="phonenumber" class="inputPhoneNumber"> -
-<%--                <input type="text" name="phonenumber2" class="inputPhoneNumber2"> ---%>
-<%--                <input type="text" name="phonenumber3" class="inputPhoneNumber3">--%>
+                <input type="text" name="phonenumber1" class="inputPhoneNumber1"> -
+                <input type="text" name="phonenumber2" class="inputPhoneNumber2"> -
+                <input type="text" name="phonenumber3" class="inputPhoneNumber3">
 
             </div>
             <h3>우편번호</h3>
@@ -66,7 +66,7 @@
                 <input type="hidden" id="sample4_extraAddress" placeholder="참고항목"  >
                 <input type="hidden" id="sample4_engAddress" placeholder="영문주소"   >
             </div>
-            <span>전부 필수정보 입니다.</span><br>
+            <span class="spanAllCheckError">전부 필수정보 입니다.</span><br>
             <input type="button" onclick="check(form)" value="회원가입하기" class="buttonJoin"><br>
             <input type="button" onclick="back()" value="뒤로가기" class="buttonBack">
         </main>

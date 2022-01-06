@@ -1,21 +1,27 @@
+let info = false;
 let temp = false;
 function check(form) {
+    console.log("temp : " , temp);
+
     const idData = form.id.value;
     const pwData = form.pw.value;
     const pwCheckData = form.pwCheck.value;
     const firstnameData = form.firstname.value;
     const residentfrontData = form.residentfront.value;
     const residentbackData = form.residentback.value;
-    const phonenumberData = form.phonenumber.value;
+    const phonenumberData1 = form.phonenumber1.value;
+    const phonenumberData2 = form.phonenumber2.value;
+    const phonenumberData3 = form.phonenumber3.value;
+    const phonenumberData = phonenumberData1+"-"+phonenumberData2+"-"+phonenumberData3;
     const emailData = form.email.value;
     const adress1Data = form.adress1.value;
     const adress2Data = form.adress2.value;
     const adress3Data = form.adress3.value;
-
     if(idData === "" ||  pwData === "" ) {
         alert("아이디와 패스워드를 입력해주세요 . ");
     }else {
         //회원가입을 하기 전에 아이디가 중복 되지는 않는지 유효성 검사를 해야함 .
+        console.log("temp : " , temp);
         $.ajax({
             type : "get",
             url : "v1/users",
@@ -28,7 +34,17 @@ function check(form) {
                     temp = true;
                 }
             }
-            if(temp === false) {
+            console.log("temp : " , temp);
+            checkInfo();
+            console.log("temp : " , temp);
+            const idError = document.querySelector(".spanIdError").valueOf();
+            if(temp === true) {
+                idError.style.display = "block";
+            }else {
+                idError.style.display = "none";
+            }
+            console.log("temp : " , temp);
+            if(temp === false && info === false) {
                 //     UserController 의 addUser 메소드를 통해 가입처리 .
                 const data = {
                     id: idData,
@@ -56,12 +72,65 @@ function check(form) {
                 // sessionStorage.setItem('log' , idData);
                 location.href='/';
             }else {
-                alert("중복된 아이디입니다.");
+
             }
+
 
         })
 
     }
+    info = false;
+    temp = false;
+}
+
+
+
+function checkInfo() {
+
+    // value 변수들
+    const inputId = document.querySelector(".inputId").value;
+    const inputPw = document.querySelector(".inputPw").value;
+    const inputPwCheck = document.querySelector(".inputPwCheck").value;
+    const inputFirstName = document.querySelector(".inputFirstName").value;
+    const inputResidentFront = document.querySelector(".inputResidentFront").value;
+    const inputResidentBack = document.querySelector(".inputResidentBack").value;
+    const inputEmail = document.querySelector(".inputEmail").value;
+    const inputPhoneNumber1 = document.querySelector(".inputPhoneNumber1").value;
+    const inputPhoneNumber2 = document.querySelector(".inputPhoneNumber2").value;
+    const inputPhoneNumber3 = document.querySelector(".inputPhoneNumber3").value;
+    const inputAdress1 = document.querySelector(".inputAdress1").value;
+    const inputAdress2 = document.querySelector(".inputAdress2").value;
+    const inputAdress3 = document.querySelector(".inputAdress3").value;
+    // 아이디 중복은 아니고 에러 메세지가 전부 none일때
+    // span 태그
+    const allCheckError = document.querySelector(".spanAllCheckError").valueOf();
+    const pwError = document.querySelector(".spanPwError").valueOf();
+    if(inputId === "" || inputPw === "" || inputPwCheck === "" || inputFirstName === "" || inputResidentFront === ""
+        || inputResidentBack === "" || inputEmail === "" ||  inputPhoneNumber1 === "" || inputPhoneNumber2 === ""
+        || inputPhoneNumber3 === "" || inputAdress1 === "" || inputAdress2 === "" || inputAdress3 === "") {
+        allCheckError.style.display = "block";
+        info = true;
+    }else {
+        allCheckError.style.display = "none";
+        info = false;
+    }
+
+    if(inputPw !== inputPwCheck) {
+        pwError.style.display = "block";
+        info = true;
+    }else {
+        pwError.style.display = "none";
+        info = false;
+    }
+
+    const error1 = pwError.style.display.valueOf();
+    const error2 = allCheckError.style.display.valueOf();
+    if(error1 === "none" && error2 == "none" ) {
+        info = false;
+    }else {
+        info = true;
+    }
+
 }
 
 //본 예제에서는 도로명 주소 표기 방식에 대한 법령에 따라, 내려오는 데이터를 조합하여 올바른 주소를 구성하는 방법을 설명합니다.
