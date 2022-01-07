@@ -1,6 +1,7 @@
 package com.example.travel.domain.event;
 
 import com.example.travel.domain.notice.NoticeRequestDto;
+import com.example.travel.util.Timestamped;
 import com.sun.istack.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,7 +16,7 @@ import java.sql.Timestamp;
 @Getter
 @Table(name="event")
 @Entity
-public class Event {
+public class Event extends Timestamped {
     @Id
     private int code;
 

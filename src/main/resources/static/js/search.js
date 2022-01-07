@@ -65,7 +65,7 @@ function search() {
                 keyArr.push(false);
                 addrCnt++;
             }
-        if(addrCnt===10){ // false 10개 : 아무것도 선택X 전체결과 보여주기
+        if(addrCnt===keyArr.length){ // 모두 false : 아무것도 선택X 전체결과 보여주기
             for(let d=0;d<keyArr.length;d++){
                 delete keyArr[d];
                 keyArr[d]=true;

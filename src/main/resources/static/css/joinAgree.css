@@ -14,7 +14,7 @@ body {
 main {
     grid-area: main;
     background-color: rgb(231, 231, 231);
-    padding-top: 30px;
+    padding: 50px;
 }
 
 
@@ -127,3 +127,7 @@ p {
     padding: 12px 12px 12px 12px;
     font-size: 12px;
 }
+
+/* 소휘추가 */
+.calcelConfirm{display: flex; justify-content: space-evenly;}
+.calcelConfirm input[type=button]{border-radius:0;padding:10px 100px;border:1px solid lightgray;}

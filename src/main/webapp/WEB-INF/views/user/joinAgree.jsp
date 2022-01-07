@@ -14,7 +14,7 @@
 <body>
 <c:import url="../header.jsp"/>
 <form>
-    <div class="wrap">
+    <div class="wrap join">
         <main>
             <div class="div_checkAll">
                 <input type="checkbox" class="checkAll" id="check_all"><label for="check_all" class="label1"><span

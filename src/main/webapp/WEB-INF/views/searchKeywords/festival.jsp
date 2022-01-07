@@ -1,10 +1,11 @@
 <%--
   Created by IntelliJ IDEA.
   User: SH
-  Date: 2022-01-01
-  Time: 오후 3:29
+  Date: 2022-01-05
+  Time: 오전 12:50
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
@@ -17,30 +18,18 @@
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/search.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="/js/search.js"></script>
-    <title>검색 더하기</title>
+    <script type='text/javascript' src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+    <script type='text/javascript' src="https://cdn.rawgit.com/abdmob/x2js/master/xml2json.js"></script>
+    <script type='text/javascript' src="/js/festival.js"></script>
+    <title>FestivalInfo</title>
 </head>
 <body>
-
-<div class="wrap search">
+<div class="wrap festival">
     <c:import url="../header.jsp"/>
-
     <main>
+
         <section class="results">
-            <h2></h2>
-            <c:forEach var="i" items="${noticeList}">
-            <article>
-                <div class="img">
-                    <img src="<c:out value="${i.imglink}"/>" alt="<c:out value="${i.placename}"/>">
-                </div>
-                <div class="contents">
-                    <h3><c:out value="${i.placename}"/></h3>
-                    <p class="addr"> <c:out value="${i.pos}"/></p>
-                    <p class="tel"> <c:out value="${i.tel}"/></p>
-                    <p class="keywords"> <c:out value="${i.keywords}"/></p>
-                </div>
-            </article>
-            </c:forEach>
+            <h2>축제정보</h2>
 
         </section>
         <section class="category">
@@ -83,60 +72,16 @@
                     <input type="radio" name="province" value="제주특별자치도" id="17">
                     <label for="17">#제주</label>
                 </form>
-
             </article>
-            <article class="keywords">
-                <form action="">
-                    <input type="checkbox" value="겨울여행" id="겨울여행">
-                    <label for="겨울여행">#겨울여행</label>
-                </form>
-                <form action="">
-                    <input type="checkbox" value="관광지" id="관광지">
-                    <label for="관광지">#관광지</label>
-                </form>
-                <form action="">
-                    <input type="checkbox" value="데이트코스" id="데이트코스">
-                    <label for="데이트코스">#데이트코스</label>
-                </form>
-                <form action="">
-                    <input type="checkbox" value="역사여행" id="역사여행">
-                    <label for="역사여행">#역사여행</label>
-                </form>
-                <form action="">
-                    <input type="checkbox" value="가족여행" id="가족여행">
-                    <label for="가족여행">#가족여행</label>
-                </form>
-                <form action="">
-                    <input type="checkbox" value="휴식" id="휴식">
-                    <label for="휴식">#휴식</label>
-                </form>
-                <form action="">
-                    <input type="checkbox" value="유네스코" id="유네스코">
-                    <label for="유네스코">#유네스코</label>
-                </form>
-                <form action="">
-                    <input type="checkbox" value="이색체험" id="이색체험">
-                    <label for="이색체험">#이색체험</label>
-                </form>
-                <form action="">
-                    <input type="checkbox" value="제주여행" id="제주여행">
-                    <label for="제주여행">#제주여행</label>
-                </form>
-                <form action="">
-                    <input type="checkbox" value="연인과함께" id="연인과함께">
-                    <label for="연인과함께">#연인과함께</label>
-                </form>
-                <form action="">
-                    <input type="checkbox" value="수도권" id="수도권">
-                    <label for="수도권">#수도권</label>
-                </form>
+            <article class="residence">
+
             </article>
             <button onclick="search()" class="button">search</button>
 
         </section>
+
     </main>
     <c:import url="../footer.jsp"/>
 </div>
-
 </body>
 </html>

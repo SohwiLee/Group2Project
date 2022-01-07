@@ -22,7 +22,7 @@
     <ul class="users">
         <form method="get" action="login">
             <input type="hidden" id="hidden">
-            <c:out value="${sessionScope.log}"/>
+            <span class="loginId"><c:out value="${sessionScope.log}"/></span>
             <c:choose>
                 <c:when test="${empty sessionScope.log}">
                     <input type="button" onclick="submit()" value="로그인" id="login"><br>
@@ -32,11 +32,11 @@
                 </c:when>
                 <c:otherwise>
                     <c:url var="logout" value="logout"/>
-                    <c:url var="delete" value="delete"/>
+<%--                    <c:url var="delete" value="delete"/>--%>
                     <c:url var="update" value="update"/>
                     <input type="button" onclick="location.href='${logout}'" value="로그아웃" id="logout"><br>
-                    <input type="button" onclick="location.href='${delete}'" value="회원탈퇴" id="delete"><br>
-                    <input type="button" onclick="location.href='${update}'" value="정보수정" id="update"><br>
+<%--                    <input type="button" onclick="location.href='${delete}'" value="회원탈퇴" id="delete"><br>--%>
+
 
                 </c:otherwise>
             </c:choose>
@@ -46,18 +46,20 @@
     <button class="open navBtn" onclick="btnOpen()">메뉴</button>
     <nav class="">
         <button class="close navBtn" onclick="btnClose()">닫기</button>
-        <ul><li><a href="/login">로그인</a></li></ul>
+        <ul><li>
+        <c:choose>
+            <c:when test="${empty sessionScope.log}">
+            <a href="/login">로그인</a>
+            </c:when>
+            <c:otherwise>
+            <input type="button" onclick="location.href='${update}'" value="정보수정" id="update"><br>
+            </c:otherwise>
+        </c:choose>
+        </li></ul>
         <ul><li><a href="/searchKey">검색</a></li></ul>
         <ul><li><a href="/festival">축제정보</a></li></ul>
         <ul><li><a href="/events">이벤트</a></li></ul>
         <ul><li><a href="/notices">공지사항</a></li></ul>
-        <ul><li>
-            <c:url var="joinAgree" value="joinAgree"/>
-<%--            <input type="button" id="agree" onclick="location.href='${joinAgree}'" value="동의페이지">--%>
-            <a id="agree" href='${joinAgree}'>동의페이지</a>
-            <c:out value="${sessionScope.log}"></c:out>
-
-        </li></ul>
     </nav>
 </header>
 </body>

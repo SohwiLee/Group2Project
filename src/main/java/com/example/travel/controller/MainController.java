@@ -137,7 +137,7 @@ public class MainController {
     // festivalInfo
     @GetMapping("/festival")
     public String festival(){
-        return "festival";
+        return "searchKeywords/festival";
     }
 
 

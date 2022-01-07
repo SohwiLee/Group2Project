@@ -1,5 +1,6 @@
 package com.example.travel.domain.place;
 
+import com.example.travel.util.Timestamped;
 import com.sun.istack.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +14,7 @@ import javax.persistence.Table;
 @Getter
 @Table(name="places")
 @Entity
-public class Place {
+public class Place extends Timestamped {
     @Id
     private int code;
 

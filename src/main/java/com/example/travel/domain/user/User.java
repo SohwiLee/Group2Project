@@ -1,6 +1,6 @@
 package com.example.travel.domain.user;
 
-import com.example.travel.util.Timestmped;
+import com.example.travel.util.Timestamped;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
@@ -17,7 +17,7 @@ import javax.persistence.Table;
 @Getter // << 게터를 만들어줌
 @Table(name="users") // 엔티티가 맵핑될 테이블 이름을 특정함
 @Entity // 이 클래스가 연동된 데이터베이스의 테이블에 해당함을 알려줌 ( 테이블 맵핑 대상으로 지정)
-public class User extends Timestmped {
+public class User extends Timestamped {
     @Id // PK를 알려줌
     private int code;
 
