@@ -7,17 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <%@page language="java" pageEncoding="utf-8" contentType="text/html; ISO-8859-1" %>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<%--    <link type="text/css" rel="stylesheet" href="css/comments.css">--%>
-    <script type="text/javascript" src="js/comment.js"></script>
+    <link href="css/commentView.css" rel="stylesheet" type="text/css">
     <title>Document</title>
 </head>
 <body>
-<form>
-<section class="sectionComment">
-    <textarea name="comment" id="idComment" class="comment"></textarea>
-    <input type="button" value="등록" class="buttonWrite" onclick="commentWrite(form)">
-</section>
-</form>
+
+        <section class="hidden">
+
+        </section>
+
+
+    <script type="text/javascript" src="/js/commentView.js"></script>
 </body>
 </html>

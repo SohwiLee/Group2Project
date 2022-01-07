@@ -178,4 +178,8 @@ public class MainController {
         return "/user/joinAgree";
     }
 
+    @GetMapping("/comment")
+    public String comment() {
+        return "/comment/comment";
+    }
 }

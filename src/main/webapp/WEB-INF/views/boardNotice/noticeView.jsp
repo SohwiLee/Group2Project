@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="/css/board.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="/js/board.js" type="text/javascript"></script>
+    <script src="/js/comment.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
     <title>NoticeView</title>
 </head>
 <body>
@@ -51,8 +54,11 @@
             <a class="button prev" href="/notice/${code-1}">이전</a>
             <a class="button toList" href="/notices">목록으로</a>
         </section>
-
+            <c:import url="../comment/commentView.jsp"/>
+            <c:import url="../comment/comment.jsp"/>
     </main>
+
+
     <c:import url="../footer.jsp"/>
 </div>
 

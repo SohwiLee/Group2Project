@@ -118,6 +118,12 @@ public class UserController {
         return code;
     }
 
+    @GetMapping("/v1/getLog")
+    public String getLog(HttpServletRequest request) {
+        String log = request.getSession().getAttribute("log")+"";
+        return log;
+    }
+
 
 
 
