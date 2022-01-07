@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
@@ -21,6 +22,7 @@
     <title>NoticeView</title>
 </head>
 <body>
+<% pageContext.setAttribute("replaceChar","\n"); %>
 <div class="wrap board">
     <c:import url="../header.jsp"/>
     <main>
@@ -35,7 +37,9 @@
                     </td>
                 </tr>
                 <tr> <td>${regdate}</td></tr>
-                <tr> <td class="content">${content}</td></tr>
+                <tr> <td class="content">
+                    <c:set var="text" value="${content}"/> ${fn:replace(text,replaceChar,"<br/>")}
+                </td></tr>
                 <tr><td> <a href="/Notice/cntlike/${code}" class="putLike" onclick="addLike()">♡</a></td></tr>
                 </tbody>
             </table>
