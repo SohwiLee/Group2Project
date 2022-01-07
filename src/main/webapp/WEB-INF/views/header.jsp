@@ -33,7 +33,7 @@
                 <c:otherwise>
                     <c:url var="logout" value="logout"/>
 <%--                    <c:url var="delete" value="delete"/>--%>
-                    <c:url var="update" value="update"/>
+
                     <input type="button" onclick="location.href='${logout}'" value="로그아웃" id="logout"><br>
 <%--                    <input type="button" onclick="location.href='${delete}'" value="회원탈퇴" id="delete"><br>--%>
 
@@ -52,7 +52,10 @@
             <a href="/login">로그인</a>
             </c:when>
             <c:otherwise>
-            <input type="button" onclick="location.href='${update}'" value="정보수정" id="update"><br>
+<%--                <c:url var="update" value="update"/>--%>
+<%--            <input type="button" onclick="location.href='${update}'" value="정보수정" id="update"><br>--%>
+                <c:url var="mypage" value="mypage"/>
+            <input type="button" onclick="location.href='${mypage}'" value="마이페이지" id="mypage"><br>
             </c:otherwise>
         </c:choose>
         </li></ul>

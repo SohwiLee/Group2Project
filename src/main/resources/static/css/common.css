@@ -41,7 +41,7 @@ nav ul li a:hover{background:#98DDCA; font-weight: bold;}
     border-radius: 50%;
     cursor:pointer;
 }
-input#update{padding: 20px 60px 20px 30px; text-align: center; width: 100%; border-radius:0;}
+input#update, input#mypage{padding: 20px 60px 20px 30px; text-align: center; width: 100%; border-radius:0;}
 .loginId{padding: 10px 18px; font-size: 1.5em; vertical-align: middle; text-align: center;}
 .navBtn:hover{font-weight:bold;background-color:dimgray;color:white;}
 .navBtn.close:hover{background-color:gray}
