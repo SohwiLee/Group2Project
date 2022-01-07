@@ -3,3 +3,5 @@ function addLike(){
 
     // console.log(document.getElementsByClassName("like"))
 }
+
+
