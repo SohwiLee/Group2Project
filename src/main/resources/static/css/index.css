@@ -1,9 +1,5 @@
-.banner {height:500px;padding:0;overflow: hidden;}
-.banner > div{height:100%;}
-.banner ul{height:100%;display: flex; align-items: center;}
-.banner ul li{width:100%;height:100%;}
-.banner ul li a{height:100%;position: relative;}
-.banner img{width:100%;position: absolute;left:0;top:calc(50% + -33vw);;}
+.banner #carousel-banner{height:600px;}
+.banner  .carousel-wrapper img{width:100%;}
 
 section .title{display: flex; align-items: center; justify-content: space-between; }
 .theme, .infos{padding:50px 0;}
@@ -19,9 +15,10 @@ section .title{display: flex; align-items: center; justify-content: space-betwee
 .infos article{width:50%;}
 .infos article .title{width:90%;}
 .infos article table{margin-top:2.5vw;width:95%;border-collapse: collapse;border-top:2px solid dimgray;border-bottom:2.5px solid dimgray;}
-.infos article table td{border-top:0.5px solid gray;border-bottom:0.5px solid gray; padding:10px; font-size:0.8em;}
+.infos article table td{border-top:0.5px solid gray;border-bottom:0.5px solid gray; padding:11px; font-size:0.8em;}
 .infos article table td a{font-weight:500;}
 
-.festival .img{margin-top:2.5vw; height:205px; display: flex; align-items: center; overflow: hidden; position: relative;}
+.festival .title{margin-bottom:2.5vw;}
+.festival .img{height:110px; display: flex; align-items: center; overflow: hidden; position: relative;}
 .festival .img:before{content:'';position:absolute;width:100%;height:100%;left:0;top:0;background:rgba(255,255,255,0.4);}
 .festival .img h4{width:100%;text-align: center; position: absolute;font-size: 1.2em;}

@@ -13,7 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="/js/common.js"></script>
     <!-- tree /f 프로젝트명 ( 프로젝트 경로에서)-->
-    <script type="text/javascript" src="/js/index.js"></script>
+<%--    <script type="text/javascript" src="/js/index.js"></script>--%>
     <title>header</title>
 </head>
 <body>

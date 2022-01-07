@@ -69,7 +69,7 @@ fetch("/json/festivals.json")
                 imgBox.append(image);
                 image.setAttribute("src", images[i]);
                 const contentBox = document.createElement("div");
-                contentBox.setAttribute("class",".contents");
+                contentBox.setAttribute("class","contents");
                 article.append(contentBox);
                 contentBox.append(h3);
                 h3.append(titles[i]);

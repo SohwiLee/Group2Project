@@ -8,25 +8,31 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/carousel.css">
     <link rel="stylesheet" href="/css/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="/js/common.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/carousel.js"></script>
     <title>index</title>
 </head>
 <body>
 <div class="wrap index">
     <c:import url="header.jsp"/>
+
     <main>
         <section class="banner">
-            <div>
-                <ul>
-                    <li>
-                        <a href=""><img src="/images/banner/banner1.jpg" alt="배너이미지1"></a>
-                    </li>
-                </ul>
-
+            <div class="carousel" id="carousel-banner">
+                <div class="carousel-wrapper">
+                    <div class="carousel-item"><img src="/images/banner/banner1.jpg" alt="배너이미지1"></div>
+                    <div class="carousel-item"><img src="/images/banner/banner2.jpg" alt="배너이미지2"></div>
+                    <div class="carousel-item"><img src="/images/banner/banner3.jpg" alt="배너이미지3"></div>
+                    <div class="carousel-item"><img src="/images/banner/banner4.jpg" alt="배너이미지4"></div>
+                </div>
+                <div class="navi-wrapper"></div>
             </div>
         </section>
+
         <section class="theme">
             <article>
                 <div class="title"><h2>테마여행</h2> <p><a href="/searchKey">지역과 함께 검색</a></p></div>
@@ -72,7 +78,16 @@
 
     <c:import url="footer.jsp"/>
 </div>
-
+<script>
+    // 배너 동작
+    new Carousel(document.querySelector('#carousel-banner'), {
+        CarouselMotion : 'slide',
+        naviPosition : 'bottom',
+        naviStyle : 'arrow',
+        autoMove : true,
+        autoMoveTime : 4000
+    });
+</script>
 
 </body>
 </html>

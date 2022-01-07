@@ -12,13 +12,13 @@ fetch("/json/festivals.json")
         let images = [];
 
         // store informations
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < 4; i+=3) {
             titles.push(jsondata[i].title);
             images.push(jsondata[i].firstimage);
         }
 
         const festivalBox = document.querySelector(".festival");
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < 2; i++) {
             const box = document.createElement("div");
             box.setAttribute("class","contentBox")
             festivalBox.append(box);
