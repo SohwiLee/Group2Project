@@ -27,6 +27,9 @@ public class CommentService {
     @Transactional
     public Comment addComment(CommentRequestDto dto) {
         Comment comment = new Comment(dto);
+
+        comment.getContent().replace("\r\n" , "<br>");
+
         return repo.save(comment);
     }
 

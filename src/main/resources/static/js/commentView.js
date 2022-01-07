@@ -19,13 +19,14 @@ $.ajax ({
                 type : "get",
                 url : "/v1/getLog"
             }).done (getLog =>{
+                content.replace("\r\n" , "<br>");
                 $('.hidden').append('<section>');
-                $('.hidden').append('<span>작성자 :',`${id}`,'</span>', `${time}`);
+                $('.hidden').append('<span>작성자 :'+`${id}`+'</span>'+ `${time}`);
                 if(getLog === "admin" || id === getLog) {
                     $('.hidden').append('<span onclick="delete2()"  class='+`${code}`+'>삭제</span>');
                 }
                 $('.hidden').append('<br>');
-                $('.hidden').append('<section>',`${content}`,'</section><br>'  );
+                $('.hidden').append('<section>'+`${content}`+'</section><br>'  );
                 $('.hidden').append('</section>');
             })
 
