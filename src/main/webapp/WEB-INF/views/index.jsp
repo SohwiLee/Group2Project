@@ -64,7 +64,7 @@
                 </table>
             </article>
             <article class="festival">
-                <div class="title"> <h3>축제정보</h3> <p><a href="/festival">+</a></p></div>
+                <div class="title"> <h3>지역축제정보</h3> <p><a href="/festival">더보기</a></p></div>
             </article>
             </div>
         </section>

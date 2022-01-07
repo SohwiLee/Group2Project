@@ -51,4 +51,3 @@ input[type=button].buttonLogin , input[type=button].buttonBack{
 /*소휘추가*/
 
 input#login, input#join{background:transparent; width:auto;}
-/*input#login:hover, input#join:hover{background:transparent;}*/

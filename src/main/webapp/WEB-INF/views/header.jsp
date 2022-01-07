@@ -56,8 +56,8 @@
             </c:otherwise>
         </c:choose>
         </li></ul>
-        <ul><li><a href="/searchKey">검색</a></li></ul>
-        <ul><li><a href="/festival">축제정보</a></li></ul>
+        <ul><li><a href="/searchKey">가볼만한곳</a></li></ul>
+        <ul><li><a href="/festival">지역축제정보</a></li></ul>
         <ul><li><a href="/events">이벤트</a></li></ul>
         <ul><li><a href="/notices">공지사항</a></li></ul>
     </nav>

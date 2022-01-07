@@ -2,17 +2,18 @@
     margin: 0;
     padding: 0;
 }
-.wrap {
+.wrap { padding:50px 0;
     display: grid;
     grid-template-columns: 1fr 450px 1fr;
     grid-template-rows: auto;
     grid-template-areas:
         "aside1 main aside2"
 ;
+    background-color:beige;
 }
 main {
     grid-area: main;
-    background-color:beige
+
 }
 h3 {
     margin : 14px 0 5px 0;
@@ -67,10 +68,18 @@ span {
     background-color: rgb(168, 161, 161);
 
 }
-.buttonUpdate , .buttonBack{
-    width: 450px;
-    height: 40px;
-    margin-bottom: 7px;
-    font-weight: 700;
-    background-color: rgb(168, 161, 161);
+input[type=button].buttonUpdate , input[type=button].buttonBack{width:100%; height:auto; margin-bottom:15px; padding:10px 0;border-radius:0;
+    /*width: 450px;*/
+    /*height: 40px;*/
+    /*margin-bottom: 7px;*/
+    /*font-weight: 700;*/
+    /*background-color: rgb(168, 161, 161);*/
+}
+
+
+/*소휘추가*/
+span.loginId{display:block;color:black;}
+input#login, input#logout{background:transparent; width:auto;}
+.wrap main input[type=button].buttonAdress{ padding:0;border-radius: 0;
+    margin-left:-5px;vertical-align: middle;border:1px solid rgb(182, 182, 182); height:32px;border-left:transparent;
 }

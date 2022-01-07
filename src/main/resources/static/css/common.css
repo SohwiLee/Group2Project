@@ -18,12 +18,15 @@ header h1 a{display:inline-block;}
 
 /*footer*/
 footer{background:#98DDCA;}
-footer div:first-child{padding:20px 30px 0;}
-footer .team{display: flex;}
-footer .team div{width:50%; padding:20px 30px 30px;}
+footer h4.link{font-weight:400;}
+footer .team{display: flex;padding:20px;}
+footer .team div{padding:20px 30px 30px; width:30%;}
 footer .team h4{margin-bottom:8px;}
+footer .team .link{ word-break: break-word; color:#3366BB;}
 footer .team span{font-size:0.8em;font-weight:400;}
 footer .team p{margin-bottom:4px;}
+footer .team .Lsh{border-left:1px solid #999;}
+footer .team .Ksh{border-left:1px solid #999;}
 
 /*navigator*/
 nav{width:0;height:0;right:3vw;top:calc(100px - 100px * 0.6 - 18%);  border-radius: 10px; background-color: #CDF0EA; overflow: hidden;}
@@ -38,12 +41,12 @@ nav ul li a:hover{background:#98DDCA; font-weight: bold;}
     border-radius: 50%;
     cursor:pointer;
 }
-input#update{padding: 20px 60px 20px 30px; text-align: center; width: 140px; border-radius:0;}
+input#update{padding: 20px 60px 20px 30px; text-align: center; width: 100%; border-radius:0;}
 .loginId{padding: 10px 18px; font-size: 1.5em; vertical-align: middle; text-align: center;}
 .navBtn:hover{font-weight:bold;background-color:dimgray;color:white;}
 .navBtn.close:hover{background-color:gray}
 .none{width:0;height:0;animation:close 0.4s ease-in-out forwards;}
-.navShow{width:230px; height:310px; animation:open 0.4s ease-in-out forwards;}
+.navShow{width:230px; height:308px; animation:open 0.4s ease-in-out forwards;}
 
 /* tables */
 table{border-top:2px solid dimgray; border-bottom:2px solid dimgray;}
@@ -54,12 +57,12 @@ table td{padding:10px;}
 .button:hover, input[type=button]:hover{ background:#98DDCA; font-weight: bold;}
 /*animation*/
 @keyframes close{
-    from{width:230px; height:310px;}
+    from{width:230px; height:308px;}
     to{width:0;height:0;}
 }
 @keyframes open{
     from{width:0;height:0;}
-    to{width:230px; height:310px;}
+    to{width:230px; height:308px;}
 }
 
 

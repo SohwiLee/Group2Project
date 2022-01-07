@@ -27,7 +27,10 @@
 
     <main>
         <section class="results">
-            <h2></h2>
+            <h2>가볼만한곳</h2>
+            <div class="init">
+                검색할 키워드를 선택해주세요
+            </div>
             <c:forEach var="i" items="${noticeList}">
             <article>
                 <div class="img">
@@ -41,6 +44,7 @@
                 </div>
             </article>
             </c:forEach>
+
 
         </section>
         <section class="category">

@@ -1,4 +1,5 @@
 function search() {
+    document.querySelector(".init").setAttribute("style","display:none");
     // h2 키워드따라 제목바꾸기
     const createH2 = document.createElement("h2");
     const keysChoose = document.querySelectorAll(".category .keywords input:checked");

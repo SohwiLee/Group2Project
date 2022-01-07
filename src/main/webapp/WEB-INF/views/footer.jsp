@@ -12,15 +12,17 @@
 </head>
 <body>
 <footer>
-    <div><h4>MADE BY_</h4></div>
     <div class="team">
+        <div><h4>MADE BY_</h4><a class="link" href="https://github.com/SohwiLee/Group2Project.git">GIT ) https://github.com/SohwiLee/Group2Project.git</a> </div>
         <div class="Lsh">
             <h4>이소휘 <span>팀장</span> </h4>
             <p>e-mail ) sohwi0723@gmail.com</p>
             <p>Tel ) 010-7102-3172</p>
         </div>
         <div class="Ksh">
-            <h4>김세현</h4>
+            <h4>김세현 <span>서기</span> </h4>
+            <p>e-mail ) sohwi0723@gmail.com</p>
+            <p>Tel ) 010-7102-3172</p>
         </div>
     </div>
 

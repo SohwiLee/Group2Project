@@ -13,6 +13,7 @@ table td.content{min-height:200px; padding:20px 10px; display: block; border-top
 
 .viewTitle{display: flex;justify-content: space-between;}
 .btnPart{overflow: hidden; padding-top:20px;}
+.button.toWrite{width:50px; text-align: center;}
 .edit{float:left;}
 .prev,.next,.toList{float:right;margin-left:10px;}
 

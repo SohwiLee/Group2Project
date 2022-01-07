@@ -1,10 +1,10 @@
 main{display:flex;width:960px;margin:0 auto 80px;}
 
-.results{width:70%;}
-.results article:first-child{ border-top:1px solid #999;}
-.results article{display: flex; width: 90%; padding: 20px;border-top:0.5px solid #999; border-bottom:0.5px solid #999; position:relative;cursor:pointer;}
+.results{width:70%;position: relative;}
+.results article:last-child{border-bottom:1px solid #999;}
+.results article{display: flex; width: 90%; padding: 20px;border-top:1px solid #999; position:relative;cursor:pointer;}
 .results article:hover:after{content:"+찜하기";font-size:2.5em;color:white;font-weight:500;position:absolute;left:calc(50% - 70px);top:calc(50% - 26px);}
-.results article:hover:before{ content:""; width:100%;height:100%;background:rgba(0,0,0,0.3);position:absolute;left:0;top:0;}
+.results article:hover:before{ content:""; width:100%;height:100%;background:rgba(0,0,0,0.5);position:absolute;left:0;top:0;}
 .results article.hide{display: none;}
 .results article .img{max-width: 155px; min-width: 155px; max-height:107px; margin-right:20px; overflow: hidden; }
 .results article .img img{width:100%}
@@ -24,3 +24,11 @@ input[type=radio]:checked + label, input[type=checkbox]:checked ~ label{color:wh
 .results article.none{display:none;}
 
 button{display: block;margin:0 auto 30px;}
+
+div.init{position: absolute;left:calc(50% - 100px);top:50%;color:dimgray;font-size:0.9em;}
+
+/*festival*/
+.festival .contents{padding-top:20px;}
+.festival div.init{
+
+}

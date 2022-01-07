@@ -1,9 +1,17 @@
 
-function search(){
+function searchF(){
+    // 초기화
+    document.querySelector(".init").setAttribute("style","display:none");
+    const articles = document.querySelectorAll(".results article");
+    for (let i = 0; i < articles.length; i++) {
+        articles[i].remove();
+    }
+
     let titles = [];
     let images = [];
     let address = [];
     let tel = [];
+
 // all fiesta
 fetch("/json/festivals.json")
     .then(response => {
@@ -21,33 +29,60 @@ fetch("/json/festivals.json")
             tel.push(jsondata[i].tel);
         }
 
-
         const section = document.querySelector(".results");
-        for (let i = 0; i < jsondata.length; i++) {
-            const article = document.createElement("article");
-            section.append(article);
-            const h3 = document.createElement("h3");
-            const imgBox = document.createElement("div");
-            imgBox.setAttribute("class","img");
-            const image = document.createElement("img");
-            article.append(imgBox);
-            imgBox.append(image);
-            image.setAttribute("src", images[i]);
-            const contentBox = document.createElement("div");
-            contentBox.setAttribute("class",".contents");
-            article.append(contentBox);
-            contentBox.append(h3);
-            h3.append(titles[i]);
-            const pAddr = document.createElement("p");
-            contentBox.append(pAddr);
-            pAddr.setAttribute("class","addr");
-            pAddr.append(address[i]);
-            const pTel = document.createElement("p");
-            contentBox.append(pTel);
-            pTel.setAttribute("class","tel");
-            pTel.append(tel[i]);
+
+        // 지역검색
+        let posArr = [];//위치 t,f
+        const posSel = document.querySelector(".category .local input:checked");
+
+        for (let i = 0; i < address.length; i++) {
+            const addrTxt = address[i];
         }
 
+
+        let cnt = 0;
+        for (let i = 0; i < address.length; i++) {
+            const text = address[i].split(" ")[0];
+            if( text === posSel.value){
+                posArr.push(true);
+            }else {
+                cnt++;
+                posArr.push(false);
+            }
+        }
+        if(cnt ===address.length){
+            for (let i = 0; i < posArr.length; i++) {
+                posArr[i] = true;
+            }
+        }
+        console.log(posArr);
+
+        for (let i = 0; i < posArr.length; i++) {
+            if(posArr[i]){
+                const article = document.createElement("article");
+                section.append(article);
+                const h3 = document.createElement("h3");
+                const imgBox = document.createElement("div");
+                imgBox.setAttribute("class","img");
+                const image = document.createElement("img");
+                article.append(imgBox);
+                imgBox.append(image);
+                image.setAttribute("src", images[i]);
+                const contentBox = document.createElement("div");
+                contentBox.setAttribute("class",".contents");
+                article.append(contentBox);
+                contentBox.append(h3);
+                h3.append(titles[i]);
+                const pAddr = document.createElement("p");
+                contentBox.append(pAddr);
+                pAddr.setAttribute("class","addr");
+                pAddr.append(address[i]);
+                const pTel = document.createElement("p");
+                contentBox.append(pTel);
+                pTel.setAttribute("class","tel");
+                pTel.append(tel[i]);
+            }
+        }
 
     });
 

@@ -19,18 +19,21 @@
     <link rel="stylesheet" href="/css/search.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type='text/javascript' src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
-    <script type='text/javascript' src="https://cdn.rawgit.com/abdmob/x2js/master/xml2json.js"></script>
     <script type='text/javascript' src="/js/festival.js"></script>
+    <style>
+        .contents{padding-top:20px;}
+    </style>
     <title>FestivalInfo</title>
 </head>
 <body>
 <div class="wrap festival">
     <c:import url="../header.jsp"/>
     <main>
-
         <section class="results">
-            <h2>축제정보</h2>
-
+            <h2>지역축제정보</h2>
+            <div class="init">
+                검색할 지역을 선택해주세요
+            </div>
         </section>
         <section class="category">
             <article class="local">
@@ -71,12 +74,14 @@
                     <label for="16">#경남</label>
                     <input type="radio" name="province" value="제주특별자치도" id="17">
                     <label for="17">#제주</label>
+                    <input type="radio" name="province" value="온라인" id="18">
+                    <label for="18">#온라인 개최</label>
                 </form>
             </article>
             <article class="residence">
 
             </article>
-            <button onclick="search()" class="button">search</button>
+            <button onclick="searchF()" class="button">search</button>
 
         </section>
 
