@@ -41,7 +41,8 @@
                 </tr>
                 <tr> <td>${regdate}</td></tr>
                 <tr> <td class="content">
-                    <c:set var="text" value="${content}"/> ${fn:replace(text,replaceChar,"<br/>")}
+                    <c:set var="text" value="${content}"/>
+                    ${fn:replace(text,replaceChar,"<br/>")}
                 </td></tr>
                 <tr><td> <a href="/Notice/cntlike/${code}" class="putLike" onclick="addLike()">♡</a></td></tr>
                 </tbody>

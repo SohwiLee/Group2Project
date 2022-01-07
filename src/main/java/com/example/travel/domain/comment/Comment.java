@@ -1,7 +1,7 @@
 package com.example.travel.domain.comment;
 
 
-import com.example.travel.util.Timestmped;
+import com.example.travel.util.Timestamped;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @Getter
 @Table(name="comment")
 @Entity
-public class Comment extends Timestmped {
+public class Comment extends Timestamped {
 
     @Id
     private int code;
