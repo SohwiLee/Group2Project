@@ -48,12 +48,12 @@ function search() {
         let addrCnt=0;
         // 데이터 key들
         for (let i = 0; i < lists.length; i++) {
-        let isSame = false;
+            let isSame = false;
             //console.log(lists[i].keywords.split("#"));
             // addrCnt=0;
             for (let j = 0; j < lists[i].keywords.split("#").length; j++) {
                 for (let k = 0; k < keysChoose.length; k++) {
-                     // console.log(lists[i].keywords.split("#")[j]+"//"+keysChoose[k].value);
+                    // console.log(lists[i].keywords.split("#")[j]+"//"+keysChoose[k].value);
                     if (lists[i].keywords.split("#")[j] === keysChoose[k].value) {
                         isSame = true;
                     }
@@ -66,13 +66,13 @@ function search() {
                 keyArr.push(false);
                 addrCnt++;
             }
-        if(addrCnt===keyArr.length){ // 모두 false : 아무것도 선택X 전체결과 보여주기
-            for(let d=0;d<keyArr.length;d++){
-                delete keyArr[d];
-                keyArr[d]=true;
+        }
+            if(addrCnt===keyArr.length){ // 모두 false : 아무것도 선택X 전체결과 보여주기
+                for(let d=0;d<keyArr.length;d++){
+                    delete keyArr[d];
+                    keyArr[d]=true;
+                }
             }
-        }
-        }
         console.log(posArr);
         console.log(keyArr);
 

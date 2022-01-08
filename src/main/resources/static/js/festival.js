@@ -39,7 +39,6 @@ fetch("/json/festivals.json")
             const addrTxt = address[i];
         }
 
-
         let cnt = 0;
         for (let i = 0; i < address.length; i++) {
             const text = address[i].split(" ")[0];
@@ -58,7 +57,7 @@ fetch("/json/festivals.json")
         console.log(posArr);
 
         for (let i = 0; i < posArr.length; i++) {
-            if(posArr[i]){
+            if(posArr[i]){ // 검색지역이 일치할 때 정보div 만들어주기
                 const article = document.createElement("article");
                 section.append(article);
                 const h3 = document.createElement("h3");

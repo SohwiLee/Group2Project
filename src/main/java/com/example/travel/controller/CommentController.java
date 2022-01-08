@@ -2,7 +2,7 @@ package com.example.travel.controller;
 
 import com.example.travel.domain.comment.Comment;
 import com.example.travel.domain.comment.CommentRequestDto;
-import com.example.travel.domain.service.CommentService;
+import com.example.travel.service.CommentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

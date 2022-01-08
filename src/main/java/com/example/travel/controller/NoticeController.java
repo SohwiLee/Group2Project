@@ -2,7 +2,7 @@ package com.example.travel.controller;
 
 import com.example.travel.domain.notice.Notice;
 import com.example.travel.domain.notice.NoticeRequestDto;
-import com.example.travel.domain.service.NoticeService;
+import com.example.travel.service.NoticeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
