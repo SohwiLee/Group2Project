@@ -83,3 +83,8 @@ input#login, input#logout{background:transparent; width:auto;}
 .wrap main input[type=button].buttonAdress{ padding:0;border-radius: 0;
     margin-left:-5px;vertical-align: middle;border:1px solid rgb(182, 182, 182); height:32px;border-left:transparent;
 }
+
+/*세현 - 개인정보수정에 회원탈퇴 버튼 추가 */
+.buttonDelete {
+    width : 120px;
+}
