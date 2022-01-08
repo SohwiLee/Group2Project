@@ -1,4 +1,4 @@
-.banner #carousel-banner{height:600px;}
+.banner #carousel-banner{height:600px;min-height:600px;}
 .banner  .carousel-wrapper img{width:100%;}
 
 section .title{display: flex; align-items: center; justify-content: space-between; }

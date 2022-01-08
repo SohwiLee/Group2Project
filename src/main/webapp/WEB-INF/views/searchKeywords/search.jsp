@@ -135,9 +135,9 @@
                     <label for="수도권">#수도권</label>
                 </form>
             </article>
-            <article class="input">
-                <input type="text" name="inputWord" placeholder="검색어 입력">
-            </article>
+<%--            <article class="input">--%>
+<%--                <input type="text" name="inputWord" placeholder="검색어 입력">--%>
+<%--            </article>--%>
             <button onclick="search()" class="button">검색</button>
 
         </section>

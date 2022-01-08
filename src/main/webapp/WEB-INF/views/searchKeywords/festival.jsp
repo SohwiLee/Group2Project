@@ -78,9 +78,9 @@
                     <label for="18">#온라인 개최</label>
                 </form>
             </article>
-            <article class="input">
-                <input type="text" name="inputWord" placeholder="검색어 입력">
-            </article>
+<%--            <article class="input">--%>
+<%--                <input type="text" name="inputWord" placeholder="검색어 입력">--%>
+<%--            </article>--%>
             <button onclick="searchF()" class="button">검색</button>
 
         </section>
