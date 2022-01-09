@@ -28,24 +28,22 @@
     <main>
         <section class="results">
             <h2>가볼만한곳</h2>
-            <div class="init">
-                검색할 키워드를 선택해주세요
-            </div>
-            <c:forEach var="i" items="${noticeList}">
-            <article>
-                <div class="img">
-                    <img src="<c:out value="${i.imglink}"/>" alt="<c:out value="${i.placename}"/>">
-                </div>
-                <div class="contents">
-                    <h3><c:out value="${i.placename}"/></h3>
-                    <p class="addr"> <c:out value="${i.pos}"/></p>
-                    <p class="tel"> <c:out value="${i.tel}"/></p>
-                    <p class="keywords"> <c:out value="${i.keywords}"/></p>
-                </div>
-            </article>
-            </c:forEach>
-
-
+<%--            <div class="init">--%>
+<%--                검색할 키워드를 선택해주세요--%>
+<%--            </div>--%>
+<%--            <c:forEach var="i" items="${noticeList}">--%>
+<%--            <article>--%>
+<%--                <div class="img">--%>
+<%--                    <img src="<c:out value="${i.imglink}"/>" alt="<c:out value="${i.placename}"/>">--%>
+<%--                </div>--%>
+<%--                <div class="contents">--%>
+<%--                    <h3><c:out value="${i.placename}"/></h3>--%>
+<%--                    <p class="addr"> <c:out value="${i.pos}"/></p>--%>
+<%--                    <p class="tel"> <c:out value="${i.tel}"/></p>--%>
+<%--                    <p class="keywords"> <c:out value="${i.keywords}"/></p>--%>
+<%--                </div>--%>
+<%--            </article>--%>
+<%--            </c:forEach>--%>
         </section>
         <section class="category">
             <article class="local">

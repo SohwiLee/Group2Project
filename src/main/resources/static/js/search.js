@@ -1,5 +1,60 @@
+let lists = [];
+$.ajax({
+    url: "v1/places",
+    type: "get",
+    dataType: "json",
+    contentType: "application/json"
+}).done(response => {
+    response.forEach(e => {
+        lists.push(e);
+    });
+
+    for (let i = 0; i < lists.length; i++) {
+            const getName = lists[i].placename;
+            const getTel = lists[i].tel;
+            const getPos = lists[i].pos;
+            const getKey = lists[i].keywords;
+            const getLink = lists[i].imglink;
+
+        // 페이지에 태그생성
+        const resultSec =document.querySelector("section.results");
+        const arti = document.createElement("article");
+        const divImg = document.createElement("div");
+        divImg.setAttribute("class","img");
+        const img = document.createElement("img");
+        img.setAttribute("src",getLink);
+        const divCont=document.createElement("div");
+        divCont.setAttribute("class","contents");
+        const h3 = document.createElement("h3");
+        const ptag1 = document.createElement("p");
+        ptag1.setAttribute("class","addr");
+        const ptag2 = document.createElement("p");
+        ptag2.setAttribute("class","tel")
+        const ptag3 = document.createElement("p");
+        ptag3.setAttribute("class","keywords");
+
+        ptag1.append(getPos);
+        ptag2.append(getTel);
+        ptag3.append(getKey);
+
+        h3.append(getName);
+
+        divCont.append(h3);
+        divCont.append(ptag1);
+        divCont.append(ptag2);
+        divCont.append(ptag3);
+
+        divImg.append(img);
+        arti.append(divImg);
+        arti.append(divCont);
+        resultSec.append(arti);
+
+
+    }
+
+});
+
 function search() {
-    document.querySelector(".init").setAttribute("style","display:none");
     // h2 키워드따라 제목바꾸기
     const createH2 = document.createElement("h2");
     const keysChoose = document.querySelectorAll(".category .keywords input:checked");

@@ -31,9 +31,9 @@
     <main>
         <section class="results">
             <h2>지역축제정보</h2>
-            <div class="init">
-                검색할 지역을 선택해주세요
-            </div>
+<%--            <div class="init">--%>
+<%--                검색할 지역을 선택해주세요--%>
+<%--            </div>--%>
         </section>
         <section class="category">
             <article class="local">
@@ -50,11 +50,11 @@
                     <label for="04">#인천</label>
                     <input type="radio" name="province" value="광주광역시" id="05">
                     <label for="05">#광주</label>
-                    <input type="radio" name="province" value="대전" id="06">
+                    <input type="radio" name="province" value="대전광역시" id="06">
                     <label for="06">#대전</label>
-                    <input type="radio" name="province" value="울산" id="07">
+                    <input type="radio" name="province" value="울산광역시" id="07">
                     <label for="07">#울산</label>
-                    <input type="radio" name="province" value="세종시" id="08">
+                    <input type="radio" name="province" value="세종특별자치시" id="08">
                     <label for="08">#세종</label>
                     <input type="radio" name="province" value="경기도" id="09">
                     <label for="09">#경기</label>
