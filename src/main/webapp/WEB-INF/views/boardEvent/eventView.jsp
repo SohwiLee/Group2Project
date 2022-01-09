@@ -18,8 +18,10 @@
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/board.css">
+    <link rel="stylesheet" href="/css/commentView.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="/js/board.js"></script>
+    <script src="/js/comment.js" type="text/javascript"></script>
     <title>NoticeView</title>
 </head>
 <body>
@@ -53,6 +55,8 @@
             <a class="button prev" href="/event/${code-1}">이전</a>
             <a class="button toList" href="/events">목록으로</a>
         </section>
+        <c:import url="../comment/commentView.jsp"/>
+        <c:import url="../comment/comment.jsp"/>
     </main>
     <c:import url="../footer.jsp"/>
 </div>

@@ -9,7 +9,6 @@ $.ajax ({
     url : "/v1/getComments"
 }) .done (comments =>{
     comments.forEach(e => {
-        console.log(e);
         const id = e.id;
         const content = e.content;
         const time = e.createdAt;
@@ -20,14 +19,13 @@ $.ajax ({
                 url : "/v1/getLog"
             }).done (getLog =>{
                 content.replace("\r\n" , "<br>");
-                $('.hidden').append('<section>');
-                $('.hidden').append('<span>작성자 :'+`${id}`+'</span>'+ `${time}`);
+                const text = "　　　　　";
+
                 if(getLog === "admin" || id === getLog) {
-                    $('.hidden').append('<span onclick="delete2()"  class='+`${code}`+'>삭제</span>');
+                    $('.hidden').append('<div class="divComment">' + '<span class="spanId">'+`${id}`+`${text}`+'</span>'+ '<span class="spanTime">'+`${time}`+`${text}`+'</span>'+'<span class="'+`${code}`+ '  " id="spanDelete" onclick="delete2()"  class='+`${code}`+'>삭제</span>'+'<br><div>'+`${content}`+'</div></div>');
+                }else {
+                    $('.hidden').append('<div class="divComment">' + '<span class="spanId">'+`${id}`+`${text}`+'</span>'+ '<span class="spanTime">'+`${time}`+`${text}`+'</span>' +'<br><div>'+`${content}`+'</div></div>' );
                 }
-                $('.hidden').append('<br>');
-                $('.hidden').append('<section>'+`${content}`+'</section><br>'  );
-                $('.hidden').append('</section>');
             })
 
 
@@ -39,6 +37,7 @@ $.ajax ({
 
 function delete2() {
     const code = event.target.className; // << 스트링
+    console.log("[coomentView] test");
     $.ajax ({
         type : "delete",
         url : `/v1/deleteComment/${code}`,

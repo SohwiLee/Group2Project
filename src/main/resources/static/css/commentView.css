@@ -1,0 +1,16 @@
+.divComment {
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    background-color: #fff6f6;
+    padding: 10px;
+}
+#spanDelete {
+    float: right;
+    cursor: pointer;
+    color : gray;
+    margin-left: 20px;
+}
+
+.hidden {
+    margin-top: 15px;
+}
