@@ -22,7 +22,7 @@
         <div class="Ksh">
             <h4>김세현 <span>팀원</span> </h4>
             <p>e-mail ) tpgus7@naver.com</p>
-            <p>Tel ) </p>
+<%--            <p>Tel ) </p>--%>
         </div>
     </div>
 
