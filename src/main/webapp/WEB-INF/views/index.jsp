@@ -7,6 +7,10 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:title" content="Tour Guide">
+    <meta property="og:description" content="전국 관광,축제 정보를 제공하는 가이드 사이트입니다.">
+    <meta property="og:image" content="/images/ogImg.jpg">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/carousel.css">
     <link rel="stylesheet" href="/css/index.css">
