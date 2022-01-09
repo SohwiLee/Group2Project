@@ -41,7 +41,6 @@
             <div class="divAdress1">
                 <input type="text" id="sample4_postcode" name="adress1" readonly class="inputAdress1">
                 <input type="button" onclick="sample4_execDaumPostcode(form)" value="우편번호 찾기" class="buttonAdress">
-
             </div>
             <h3>도로명주소</h3>
             <div class="divAdress2">

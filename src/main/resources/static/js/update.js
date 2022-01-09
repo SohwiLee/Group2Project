@@ -2,7 +2,6 @@ $.ajax({
     type : "get",
     url : "updateData"
 }) .done (user => {
-    console.log(user);
     const userPw = user.pw.valueOf();
     const userPhoneNumber = user.phonenumber.valueOf();
     const userEmail = user.email.valueOf();
