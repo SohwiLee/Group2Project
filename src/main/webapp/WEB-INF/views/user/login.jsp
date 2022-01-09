@@ -15,9 +15,9 @@
 </head>
 <body>
 <c:import url="../header.jsp"/>
-    <form>
         <div class="wrap">
             <main>
+            <form>
                 <h1>로그인</h1>
                 <h3>아이디</h3>
                 <div class="divId">
@@ -29,11 +29,11 @@
                 </div>
                 <input type="button" onclick="checkId(form)" value="로그인" class="buttonLogin">
                 <input type="button" onclick="backPage()"  value="뒤로가기" class="buttonBack">
+            </form>
             </main>
             <aside1></aside1>
             <aside2></aside2>
         </div>
-    </form>
 <c:import url="../footer.jsp"/>
 </body>
 </html>

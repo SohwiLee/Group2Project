@@ -17,6 +17,7 @@
 <form>
     <div class="wrap">
         <main>
+            <section>
             <h1>개인정보 수정</h1>
             <h3>비밀번호</h3>
             <div class="divPw">
@@ -39,7 +40,7 @@
             <div class="divAdress1">
                 <input type="text" id="sample4_postcode" name="adress1" readonly class="inputAdress1">
                 <input type="button" onclick="sample4_execDaumPostcode(form)" value="우편번호 찾기" class="buttonAdress">
-                <input type="button" onclick="goDelete(form)" value="회원탈퇴" class="buttonDelete">
+
             </div>
             <h3>도로명주소</h3>
             <div class="divAdress2">
@@ -55,6 +56,11 @@
             </div>
             <input type="button" onclick="update(form)" value="완료" class="buttonUpdate">
             <input type="button" onclick="backPage()" value="뒤로가기" class="buttonBack">
+            </section>
+            <section>
+                <h1>회원탈퇴</h1>
+                <input type="button" onclick="goDelete(form)" value="회원탈퇴" class="buttonDelete">
+            </section>
         </main>
         <aside1></aside1>
         <aside2></aside2>

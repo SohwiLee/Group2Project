@@ -20,9 +20,9 @@
             <p>Tel ) 010-7102-3172</p>
         </div>
         <div class="Ksh">
-            <h4>김세현 <span>서기</span> </h4>
-            <p>e-mail ) sohwi0723@gmail.com</p>
-            <p>Tel ) 010-7102-3172</p>
+            <h4>김세현 <span>팀원</span> </h4>
+            <p>e-mail ) tpgus7@naver.com</p>
+            <p>Tel ) </p>
         </div>
     </div>
 

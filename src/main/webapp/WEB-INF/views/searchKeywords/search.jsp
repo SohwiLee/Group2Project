@@ -62,11 +62,11 @@
                     <label for="04">#인천</label>
                     <input type="radio" name="province" value="광주광역시" id="05">
                     <label for="05">#광주</label>
-                    <input type="radio" name="province" value="대전" id="06">
+                    <input type="radio" name="province" value="대전광역시" id="06">
                     <label for="06">#대전</label>
-                    <input type="radio" name="province" value="울산" id="07">
+                    <input type="radio" name="province" value="울산광역시" id="07">
                     <label for="07">#울산</label>
-                    <input type="radio" name="province" value="세종시" id="08">
+                    <input type="radio" name="province" value="세종특별자치시" id="08">
                     <label for="08">#세종</label>
                     <input type="radio" name="province" value="경기도" id="09">
                     <label for="09">#경기</label>
@@ -91,10 +91,6 @@
             </article>
             <article class="keywords">
                 <form action="">
-                    <input type="checkbox" value="겨울여행" id="겨울여행">
-                    <label for="겨울여행">#겨울여행</label>
-                </form>
-                <form action="">
                     <input type="checkbox" value="관광지" id="관광지">
                     <label for="관광지">#관광지</label>
                 </form>
@@ -107,12 +103,44 @@
                     <label for="역사여행">#역사여행</label>
                 </form>
                 <form action="">
-                    <input type="checkbox" value="가족여행" id="가족여행">
-                    <label for="가족여행">#가족여행</label>
+                    <input type="checkbox" value="체험" id="체험">
+                    <label for="체험">#체험</label>
+                </form>
+                <form action="">
+                    <input type="checkbox" value="힐링" id="힐링">
+                    <label for="힐링">#힐링</label>
+                </form>
+                <form action="">
+                    <input type="checkbox" value="아이와함께" id="아이와함께">
+                    <label for="아이와함께">#아이와함께</label>
+                </form>
+                <form action="">
+                    <input type="checkbox" value="가족과함께" id="가족과함께">
+                    <label for="가족과함께">#가족과함께</label>
+                </form>
+                <form action="">
+                    <input type="checkbox" value="연인과함께" id="연인과함께">
+                    <label for="연인과함께">#연인과함께</label>
+                </form>
+                <form action="">
+                    <input type="checkbox" value="남녀노소" id="남녀노소">
+                    <label for="남녀노소">#남녀노소</label>
+                </form>
+                <form action="">
+                    <input type="checkbox" value="친구와함께" id="친구와함께">
+                    <label for="친구와함께">#친구와함께</label>
                 </form>
                 <form action="">
                     <input type="checkbox" value="휴식" id="휴식">
                     <label for="휴식">#휴식</label>
+                </form>
+                <form action="">
+                    <input type="checkbox" value="트레킹" id="트레킹">
+                    <label for="트레킹">#트레킹</label>
+                </form>
+                <form action="">
+                    <input type="checkbox" value="경치좋은곳" id="경치좋은곳">
+                    <label for="경치좋은곳">#경치좋은곳</label>
                 </form>
                 <form action="">
                     <input type="checkbox" value="유네스코" id="유네스코">
@@ -126,10 +154,7 @@
                     <input type="checkbox" value="제주여행" id="제주여행">
                     <label for="제주여행">#제주여행</label>
                 </form>
-                <form action="">
-                    <input type="checkbox" value="연인과함께" id="연인과함께">
-                    <label for="연인과함께">#연인과함께</label>
-                </form>
+
                 <form action="">
                     <input type="checkbox" value="수도권" id="수도권">
                     <label for="수도권">#수도권</label>

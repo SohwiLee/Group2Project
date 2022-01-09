@@ -40,7 +40,11 @@
         </section>
         <section class="btnPart">
         <%--admin일때만--%>
-            <a href="/eventWrite" class="button toWrite">글쓰기</a>
+            <c:choose>
+                <c:when test="${sessionScope.log=='admin'}">
+                    <a href="/eventWrite" class="button toWrite">글쓰기</a>
+                </c:when>
+            </c:choose>
         </section>
     </main>
     <c:import url="../footer.jsp"/>

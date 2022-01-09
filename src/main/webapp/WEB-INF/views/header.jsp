@@ -33,8 +33,8 @@
                 <c:otherwise>
                     <c:url var="logout" value="logout"/>
                     <input type="button" onclick="location.href='${logout}'" value="로그아웃" id="logout"><br>
-                    <c:url var="delete" value="delete"/>
-                    <input type="button" onclick="location.href='${delete}'" value="회원탈퇴" id="delete"><br>
+<%--                    <c:url var="delete" value="delete"/>--%>
+<%--                    <input type="button" onclick="location.href='${delete}'" value="회원탈퇴" id="delete"><br>--%>
                 </c:otherwise>
             </c:choose>
         </form>
