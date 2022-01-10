@@ -50,7 +50,11 @@
         </section>
         <section class="btnPart">
             <%-- admin일 때만 보이기--%>
+                <c:choose>
+                    <c:when test="${sessionScope.log=='admin'}">
             <a class="button edit" href="/event/${code}/edit">수정</a>
+                    </c:when>
+                </c:choose>
             <a class="button next" href="/event/${code+1}">다음</a>
             <a class="button prev" href="/event/${code-1}">이전</a>
             <a class="button toList" href="/events">목록으로</a>
