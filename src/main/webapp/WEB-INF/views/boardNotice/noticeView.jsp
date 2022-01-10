@@ -52,7 +52,11 @@
         </section>
         <section class="btnPart">
             <%-- admin일 때만 보이기--%>
-            <a class="button edit" href="/notice/${code}/edit">수정</a>
+                <c:choose>
+                    <c:when test="${sessionScope.log=='admin'}">
+                        <a class="button edit" href="/notice/${code}/edit">수정</a>
+                    </c:when>
+                </c:choose>
             <a class="button next" href="/notice/${code+1}">다음</a>
             <a class="button prev" href="/notice/${code-1}">이전</a>
             <a class="button toList" href="/notices">목록으로</a>

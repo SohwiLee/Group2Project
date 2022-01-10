@@ -42,18 +42,18 @@
                 <div class="title"><h2>테마여행</h2> <p><a href="/searchKey">지역과 함께 검색</a></p></div>
                 <div class="lists">
                     <ul>
-                        <li><a href="">#가족과함께</a></li>
-                        <li><a href="">#가족여행</a></li>
-                        <li><a href="">#관광지</a></li>
-                        <li><a href="">#휴식</a></li>
-                        <li><a href="">#연인과함께</a></li>
-                        <li><a href="">#데이트코스</a></li>
-                        <li><a href="">#로맨틱야경</a></li>
-                        <li><a href="">#역사여행</a></li>
-                        <li><a href="">#유네스코</a></li>
-                        <li><a href="">#제주여행</a></li>
-                        <li><a href="">#수도권</a></li>
-                        <li><a href="">#이색체험</a></li>
+                        <li><a href="/searchKey">#가족과함께</a></li>
+                        <li><a href="/searchKey">#가족여행</a></li>
+                        <li><a href="/searchKey">#관광지</a></li>
+                        <li><a href="/searchKey">#휴식</a></li>
+                        <li><a href="/searchKey">#연인과함께</a></li>
+                        <li><a href="/searchKey">#데이트코스</a></li>
+                        <li><a href="/searchKey">#로맨틱야경</a></li>
+                        <li><a href="/searchKey">#역사여행</a></li>
+                        <li><a href="/searchKey">#유네스코</a></li>
+                        <li><a href="/searchKey">#제주여행</a></li>
+                        <li><a href="/searchKey">#수도권</a></li>
+                        <li><a href="/searchKey">#이색체험</a></li>
                     </ul>
 
                 </div>

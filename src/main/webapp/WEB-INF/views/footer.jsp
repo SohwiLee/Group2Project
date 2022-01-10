@@ -16,7 +16,7 @@
         <div><h4>MADE BY_</h4><a class="link" href="https://github.com/SohwiLee/Group2Project.git">GIT ) https://github.com/SohwiLee/Group2Project.git</a> </div>
         <div class="Lsh">
             <h4>이소휘 <span>팀장</span> </h4>
-            <p>e-mail ) tpgus7@naver.com</p>
+            <p>e-mail ) sohwi0723@gmail.com</p>
             <p>Tel ) 010-7207-6805</p>
         </div>
         <div class="Ksh">
