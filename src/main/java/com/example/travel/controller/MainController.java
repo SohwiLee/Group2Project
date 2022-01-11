@@ -30,13 +30,18 @@ public class MainController {
     }
 
     // search page
-    @GetMapping("/search")
-    public List<Place> search() {
-        return pController.getPlaces();
-    }
+//    @GetMapping("/search")
+//    public List<Place> search() {
+//        return pController.getPlaces();
+//    }
     @GetMapping("/searchKey")
     public String searchview(){
         return "/searchKeywords/search";
+    }
+    @GetMapping("/searchKey/{key}")
+    public String searchFamily(HttpServletRequest request, @PathVariable String key){
+        request.getParameter("key");
+        return pController.keyPlace(request, key);
     }
 
     // event page

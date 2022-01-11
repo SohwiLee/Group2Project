@@ -6,12 +6,19 @@ import com.example.travel.service.PlaceService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
 public class PlaceController {
     private final PlaceService service;
+
+    @GetMapping("/places")
+    public String keyPlace(HttpServletRequest request, String key){
+        request.setAttribute("key",key);
+        return "/searchKeywords/search";
+    }
 
     //create
     @PostMapping("v1/places")

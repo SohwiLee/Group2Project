@@ -1,4 +1,5 @@
-<%--
+<%@ page import="javax.script.ScriptEngine" %>
+<%@ page import="javax.script.ScriptEngineManager" %><%--
   Created by IntelliJ IDEA.
   User: SH
   Date: 2022-01-01
@@ -21,8 +22,8 @@
     <script src="/js/search.js"></script>
     <title>검색 더하기</title>
 </head>
-<body>
-
+<% String key = String.valueOf(request.getParameter("key")); %>
+<body onload="<%if(key!=null){%>search();<%}%>">
 <div class="wrap search">
     <c:import url="../header.jsp"/>
 
@@ -109,10 +110,7 @@
                     <input type="checkbox" value="힐링" id="힐링">
                     <label for="힐링">#힐링</label>
                 </form>
-                <form action="">
-                    <input type="checkbox" value="아이와함께" id="아이와함께">
-                    <label for="아이와함께">#아이와함께</label>
-                </form>
+
                 <form action="">
                     <input type="checkbox" value="가족과함께" id="가족과함께">
                     <label for="가족과함께">#가족과함께</label>
@@ -132,10 +130,6 @@
                 <form action="">
                     <input type="checkbox" value="휴식" id="휴식">
                     <label for="휴식">#휴식</label>
-                </form>
-                <form action="">
-                    <input type="checkbox" value="트레킹" id="트레킹">
-                    <label for="트레킹">#트레킹</label>
                 </form>
                 <form action="">
                     <input type="checkbox" value="경치좋은곳" id="경치좋은곳">
@@ -158,6 +152,15 @@
                     <input type="checkbox" value="수도권" id="수도권">
                     <label for="수도권">#수도권</label>
                 </form>
+
+
+                <%if(key!="null"){%>
+                <form action="">
+                    <input type="checkbox" value="<%= key %>" id="key" onload="javascript:search()" checked>
+                    <label for="key">#<%= key %></label>
+                </form>
+                <%}%>
+
             </article>
 <%--            <article class="input">--%>
 <%--                <input type="text" name="inputWord" placeholder="검색어 입력">--%>

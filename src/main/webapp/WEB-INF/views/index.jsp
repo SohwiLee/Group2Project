@@ -42,18 +42,19 @@
                 <div class="title"><h2>테마여행</h2> <p><a href="/searchKey">지역과 함께 검색</a></p></div>
                 <div class="lists">
                     <ul>
-                        <li><a href="/searchKey">#가족과함께</a></li>
-                        <li><a href="/searchKey">#가족여행</a></li>
-                        <li><a href="/searchKey">#관광지</a></li>
-                        <li><a href="/searchKey">#휴식</a></li>
-                        <li><a href="/searchKey">#연인과함께</a></li>
-                        <li><a href="/searchKey">#데이트코스</a></li>
-                        <li><a href="/searchKey">#로맨틱야경</a></li>
-                        <li><a href="/searchKey">#역사여행</a></li>
-                        <li><a href="/searchKey">#유네스코</a></li>
-                        <li><a href="/searchKey">#제주여행</a></li>
-                        <li><a href="/searchKey">#수도권</a></li>
-                        <li><a href="/searchKey">#이색체험</a></li>
+                        <form action="/searchKey">
+                            <li><input type="submit" value="가족과함께" id="가족과함께" name="key"></li>
+                            <li><input type="submit" value="아이와함께" id="아이와함께" name="key"></li>
+                            <li><input type="submit" value="트레킹" id="트레킹" name="key"></li>
+                            <li><input type="submit" value="힐링여행" id="힐링여행" name="key"></li>
+                            <li><input type="submit" value="자연" id="자연" name="key"></li>
+                            <li><input type="submit" value="산책" id="산책" name="key"></li>
+                            <li><input type="submit" value="역사유적" id="역사유적" name="key"></li>
+                            <li><input type="submit" value="역사관광지" id="역사관광지" name="key"></li>
+                            <li><input type="submit" value="교과서속여행" id="교과서속여행" name="key"></li>
+                            <li><input type="submit" value="체험교육" id="체험교육" name="key"></li>
+                            <li><input type="submit" value="조선" id="조선" name="key"></li>
+                        </form>
                     </ul>
 
                 </div>
