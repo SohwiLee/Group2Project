@@ -3,6 +3,9 @@ let images = [];
 let address = [];
 let tel = [];
 
+let contentid=[];
+let contenttypeid=[];
+
 // all fiesta
 fetch("/json/festivals.json")
     .then(response => {
@@ -17,6 +20,8 @@ fetch("/json/festivals.json")
             images.push(jsondata[i].firstimage);
             address.push(jsondata[i].addr1);
             tel.push(jsondata[i].tel);
+            contentid.push(jsondata[i].contentid);
+            contenttypeid.push(jsondata[i].contenttypeid);
         }
 
         const section = document.querySelector(".results");
@@ -27,7 +32,7 @@ fetch("/json/festivals.json")
 
 
         for (let i = 0; i < titles.length; i++) {
-                const article = document.createElement("article");
+                const article= document.createElement("article");
                 section.append(article);
                 const h3 = document.createElement("h3");
                 const pTag = document.createElement("p");

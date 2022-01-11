@@ -4,7 +4,7 @@
     font-family: 'Hahmlet', serif; font-family: 'Josefin Sans', sans-serif;
     /*font-family: 'Hahmlet', serif; font-family: 'Luxurious Roman', sans-serif;*/
 }
-.wrap{width:100%;min-height:calc(100vh - 390px);}
+.wrap{width:100%;min-width:360px;min-height:calc(100vh - 390px);}
 a{display: block; color:inherit;}
 
 /*header*/
@@ -12,7 +12,7 @@ header{height:100px;background:#98DDCA;position:relative;}
 header h1{text-align:center;line-height:100px; font-size:2.5em;}
 header h1 a{display:inline-block;}
 .users, nav{position:absolute; z-index: 5;}
-.users{left:10vw;top:calc(0% + 45px - 1em);}
+.users{left:6vw;top:calc(0% + 45px - 1em);}
 .users form{display: flex;}
 .users form input{padding:10px 18px;background:transparent;}
 
@@ -69,7 +69,7 @@ table td{padding:10px;}
 
 .sectionComment {
     background-color: rgb(245, 255, 253);
-    width: 980px;
+    max-width: 980px;
     height: 130px;
     display :flex;
     justify-content :center;
@@ -91,4 +91,22 @@ table td{padding:10px;}
     height: 95px;
     margin-left: 10px;
     border-radius : 5px;
+}
+
+
+
+@media screen and (max-width: 1000px) and (min-width:768px) {
+    body { background-color: lightpink; }
+    .theme, .infos{padding:50px 20px;}
+    div.board h2{padding:0 20px;}
+
+}
+@media screen and (max-width: 767px) {
+    body { background-color: lightgreen; }
+    header h1{font-size: 1.5em; }
+    .users{left:1vw;}
+    .infos .notice table{font-size:0.9em; }
+}
+@media screen and (max-width: 360px) {
+
 }

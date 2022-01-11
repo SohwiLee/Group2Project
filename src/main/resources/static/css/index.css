@@ -1,17 +1,17 @@
-.banner #carousel-banner{height:600px;min-height:600px;}
+.banner #carousel-banner{height:40vw; max-height:500px;}
 .banner  .carousel-wrapper img{width:100%;}
 
 section .title{display: flex; align-items: center; justify-content: space-between; }
 .theme, .infos{padding:50px 0;}
 
 .theme{border-bottom:1px solid #e3effd;}
-.theme article{width:980px;margin:0 auto;}
+.theme article{max-width:980px;margin:0 auto;}
 .theme .lists ul form{display: flex;align-items: center;flex-wrap:wrap;gap:10px; padding:2.5vw 0;}
 .theme .lists li input{padding:10px 18px; border-radius: 20px;border:1px solid gray; color:#666; background:white; }
 .theme .lists li input:hover{border:1px solid #57667e; font-weight: 600; color:white; background: #57667e; cursor:pointer;}
 
 .infos{background-color: #e3effd; }
-.infos > div{width:980px;margin:0 auto; display:flex;}
+.infos > div{max-width:980px;margin:0 auto; display:flex;}
 .infos article{width:50%;}
 .infos article .title{width:90%;}
 .infos article table{margin-top:2.5vw;width:95%;border-collapse: collapse;border-top:2px solid dimgray;border-bottom:2.5px solid dimgray;}
