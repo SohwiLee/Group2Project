@@ -44,9 +44,10 @@ fetch("/json/festivals.json")
                 pTag.append(titles[i]);
                 h3.append(pTag);
                 const pTag2 = document.createElement("p");
-                pTag2.append("☆");
-                pTag2.setAttribute("class","myPick");
-                h3.append(pTag2);
+                aTag.append("☆");
+                aTag.setAttribute("class","myPick");
+                aTag.setAttribute("href","");
+                h3.append(aTag);
                 const pAddr = document.createElement("p");
                 contentBox.append(pAddr);
                 pAddr.setAttribute("class","addr");
