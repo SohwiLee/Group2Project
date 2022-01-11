@@ -158,7 +158,7 @@
 
                     // 페이지에 태그생성
                     resultSec.append(
-                        "<article><div class='img'><img src='" + getLink + "' alt='" + getName + "'></div><div class='contents'><h3>" + getName + "</h3><p class='addr'>" + getPos + "</p><p class='tel'>" + getTel + "</p><p class='keywords'>" + getKey + "</p></div></article>"
+                        "<article><div class='img'><img src='" + getLink + "' alt='" + getName + "'></div><div class='contents'><h3><p>" + getName + "</p><a class='myPick' href=''>☆</a></h3><p class='addr'>" + getPos + "</p><p class='tel'>" + getTel + "</p><p class='keywords'>" + getKey + "</p></div></article>"
                     );
                 }
             }

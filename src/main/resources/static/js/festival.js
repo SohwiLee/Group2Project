@@ -30,6 +30,7 @@ fetch("/json/festivals.json")
                 const article = document.createElement("article");
                 section.append(article);
                 const h3 = document.createElement("h3");
+                const pTag = document.createElement("p");
                 const imgBox = document.createElement("div");
                 imgBox.setAttribute("class","img");
                 const image = document.createElement("img");
@@ -40,7 +41,12 @@ fetch("/json/festivals.json")
                 contentBox.setAttribute("class","contents");
                 article.append(contentBox);
                 contentBox.append(h3);
-                h3.append(titles[i]);
+                pTag.append(titles[i]);
+                h3.append(pTag);
+                const pTag2 = document.createElement("p");
+                pTag2.append("☆");
+                pTag2.setAttribute("class","myPick");
+                h3.append(pTag2);
                 const pAddr = document.createElement("p");
                 contentBox.append(pAddr);
                 pAddr.setAttribute("class","addr");
