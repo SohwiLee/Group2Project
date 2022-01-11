@@ -96,17 +96,12 @@ table td{padding:10px;}
 
 
 @media screen and (max-width: 1000px) and (min-width:768px) {
-    body { background-color: lightpink; }
     .theme, .infos{padding:50px 20px;}
     div.board h2{padding:0 20px;}
 
 }
 @media screen and (max-width: 767px) {
-    body { background-color: lightgreen; }
     header h1{font-size: 1.5em; }
     .users{left:1vw;}
     .infos .notice table{font-size:0.9em; }
-}
-@media screen and (max-width: 360px) {
-
 }
