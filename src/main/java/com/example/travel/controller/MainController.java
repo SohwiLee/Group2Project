@@ -145,6 +145,13 @@ public class MainController {
         return "searchKeywords/festival";
     }
 
+    @GetMapping("/festival/{code}")
+    public String festivalView(HttpServletRequest request,@PathVariable int code){
+        request.setAttribute("code",code);
+        return "searchKeywords/festivalView";
+    }
+
+
 
     // users Information
     @GetMapping("/join")
@@ -187,4 +194,9 @@ public class MainController {
     public String comment() {
         return "/comment/comment";
     }
+
+
+
+
 }
+

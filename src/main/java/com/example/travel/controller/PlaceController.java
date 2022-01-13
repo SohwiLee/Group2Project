@@ -26,9 +26,16 @@ public class PlaceController {
 
     //read
     @GetMapping("v1/places/{code}")
-    public Place getPlace(@PathVariable int code){return service.getPlace(code);}
+    public Place getPlace(@PathVariable int code){
+
+        return service.getPlace(code);
+    }
     @GetMapping("v1/places")
-    public List<Place> getPlaces(){return service.getPlaces();}
+    public List<Place> getPlaces(HttpServletRequest request){
+        List<Place> places = service.getPlaces();
+        request.setAttribute("lists",places);
+        return service.getPlaces();
+    }
 
     //update
     @PutMapping("v1/places/{code}")

@@ -20,20 +20,28 @@
     <link rel="stylesheet" href="/css/search.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type='text/javascript' src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
-    <script type='text/javascript' src="/js/festival.js"></script>
-    <style>
-        .contents{padding-top:20px;}
-    </style>
+    <script type='text/javascript' src="/js/festivalViews.js"></script>
     <title>FestivalView</title>
 </head>
-<body>
-<div class="wrap festival">
+<% String code = String.valueOf(request.getAttribute("code"));%>
+<body onload="showPage(<%=code%>);">
+<div class="wrap festival view">
     <c:import url="../header.jsp"/>
     <main>
-      <section>
-          뷰페이지입니다.
-      </section>
-
+        <section>
+            <h2></h2>
+            <table class="detailTable">
+                <tr><td colspan="2" class="img1"><img ></td></tr>
+<%--                <tr><td colspan="2" class="img2"><img ></td></tr>--%>
+                <tr><td>장소</td><td class="addr"> : </td></tr>
+                <tr><td>문의사항</td><td class="tel"> : </td></tr>
+                <tr><td>행사시작</td><td class="start"> : </td></tr>
+                <tr><td>행사종료</td><td class="end"> : </td></tr>
+            </table>
+        </section>
+        <section class="btnPart">
+            <button onclick="history.back()">뒤로가기</button>
+        </section>
     </main>
     <c:import url="../footer.jsp"/>
 </div>

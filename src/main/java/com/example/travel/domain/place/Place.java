@@ -26,6 +26,7 @@ public class Place extends Timestamped {
     private String placename,pos,keywords,imglink;
 
     public Place(PlaceRequestDto dto){
+        this.code=dto.getCode();
         this.placename=dto.getPlacename();
         this.pos = dto.getPos();
         this.keywords=dto.getKeywords();
@@ -34,6 +35,7 @@ public class Place extends Timestamped {
     }
 
     public void update(PlaceRequestDto dto){
+        this.code=dto.getCode();
         this.placename=dto.getPlacename();
         this.pos = dto.getPos();
         this.keywords=dto.getKeywords();
